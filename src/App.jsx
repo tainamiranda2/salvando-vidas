@@ -3,17 +3,14 @@
 //import viteLogo from '/vite.svg'
 //import './App.css'
 
+import Router from "./router/Router"
+
 function App() {
  // const [count, setCount] = useState(0)
 
   return (
     <>
-     <h1>Salvados vidas</h1>
-     <button>Orientações</button>
-     <button>Idealizadores</button>
-
-     <button>Play</button>
-
+   <Router/>
     </>
   )
 }
