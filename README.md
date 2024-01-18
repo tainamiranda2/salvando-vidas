@@ -1,8 +1,21 @@
-# React + Vite
+# RCP - Salvando Vidas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição do Jogo
 
-Currently, two official plugins are available:
+O "RCP - Salvando Vidas" é um jogo educacional desenvolvido para ensinar habilidades de primeiros socorros, especificamente em casos de parada cardiorrespiratória (PCR). O jogador assume o papel de Vitória, uma socorrista em treinamento, e enfrenta diferentes cenários de emergência onde é necessário aplicar técnicas de reanimação cardiopulmonar (RCP).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
+
+- Aprendizado interativo sobre procedimentos de primeiros socorros.
+- Escolha de equipamentos e decisões que impactam o desfecho do atendimento.
+- Simulação realista de situações de emergência.
+
+## Idealizadores
+
+Este jogo esta em processo de desenvolvimento por Tainá e Arthur como parte do projeto integrador da disciplina de Projeto Integrador. 
+
+## Instruções de Uso
+
+1. Abra o link do jogo.
+2. Execute o jogo.
+3. Siga as instruções na tela para realizar os procedimentos de RCP.
