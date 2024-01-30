@@ -3,7 +3,7 @@
 export const Idealizadores= () => {
     return(
         <>
-        <h1>Tainá Miranda</h1>
+        <h2>Tainá Miranda</h2>
         
         </>
     )

@@ -16,6 +16,6 @@ Este jogo esta em processo de desenvolvimento por Tainá e Arthur como parte do 
 
 ## Instruções de Uso
 
-1. Abra o link do jogo.
+1. Abra o link do jogo. (https://salvando-vidas.vercel.app/)
 2. Execute o jogo.
 3. Siga as instruções na tela para realizar os procedimentos de RCP.

@@ -5,6 +5,7 @@ import { Home } from '../pages/home/Home'
 import { Jogo } from '../pages/jogo/Jogo'
 import { Cadastro } from '../pages/cadastro/Cadastro'
 import { Idealizadores } from '../pages/idealizadores/Idealizadores'
+import { Orientacoes } from '../pages/orientacoes/Orientacoes'
 
 const Router= () => {
     return (
@@ -13,6 +14,8 @@ const Router= () => {
     <Route path='/' element={<Home/>}/>
     <Route path='/jogo' element={<Jogo/>}/>
     <Route path='/cadastro' element={<Cadastro/>}/>
+    <Route path='/orientações' element={<Orientacoes/>}/>
+
     <Route path='/idealizadores' element={<Idealizadores/>}/>
 
 </Routes>
