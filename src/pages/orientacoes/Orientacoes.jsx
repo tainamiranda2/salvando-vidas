@@ -1,8 +1,9 @@
 import { useState } from 'react';
-//import './Orientacoes.css'; // Importe o arquivo de estilos CSS
+import { useNavigate} from 'react-router-dom';
 
 export const Orientacoes = () => {
   const [currentStep, setCurrentStep] = useState(0);
+  const history = useNavigate();
 
   const baloes = [
     "Olá, meu nome é VITÓRIA",
@@ -16,17 +17,29 @@ export const Orientacoes = () => {
   const handleNext = () => {
     if (currentStep < baloes.length - 1) {
       setCurrentStep(currentStep + 1);
+    } else {
+      // Se estiver na última frase, redirecionar para a nova página
+      history('/jogo');
     }
   };
 
+  const handleBack = () => {
+    if (currentStep > 0) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
   return (
     <div className="orientacoes-container">
       <h1>Orientações</h1>
+     
       <div className="balao-container">
         <p className="balao">{baloes[currentStep]}</p>
         <button className="button-next" onClick={handleNext}>
           NEXT
         </button>
+        <button className="button-back" onClick={handleBack}>
+            VOLTAR
+          </button>
       </div>
     </div>
   );

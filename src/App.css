@@ -18,6 +18,7 @@ button{
   font-size: 20px;
 
 }
+/*css da orientaçaõ*/
 
 .button-next{
 
@@ -45,4 +46,27 @@ color: #ae332e;
   border-width: 10px;
   border-style: solid;
   border-color: #fff transparent transparent transparent;
+}
+/*css do jogo*/
+.container {
+  text-align: center;
+  padding: 20px;
+
+}
+
+.images-container {
+  background: #354aa7;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.images-container img {
+  width: 100px; /* Ajuste o tamanho conforme necessário */
+  cursor: pointer;
+  transition: border 0.3s ease; /* Adiciona uma transição suave na mudança da borda */
+}
+
+.images-container img.selected {
+  border: 2px solid white;
 }
