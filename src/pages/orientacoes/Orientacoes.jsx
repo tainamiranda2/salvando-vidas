@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate} from 'react-router-dom';
-
+import img2 from '../../img/img2.png';
 export const Orientacoes = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const history = useNavigate();
@@ -19,7 +19,7 @@ export const Orientacoes = () => {
       setCurrentStep(currentStep + 1);
     } else {
       // Se estiver na última frase, redirecionar para a nova página
-      history('/jogo');
+      history('/QuizOne');
     }
   };
 
@@ -31,7 +31,7 @@ export const Orientacoes = () => {
   return (
     <div className="orientacoes-container">
       <h1>Orientações</h1>
-     
+      <img src={img2} alt="Descrição da Imagem" className="card-imagem" />
       <div className="balao-container">
         <p className="balao">{baloes[currentStep]}</p>
         <button className="button-next" onClick={handleNext}>

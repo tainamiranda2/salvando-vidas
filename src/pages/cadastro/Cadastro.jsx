@@ -6,7 +6,7 @@ export const Cadastro = () => {
   const history = useNavigate();
 
   const handleButtonClick = () => {
-    history("jogo");
+    history("QuizOne");
   };
 
   return (

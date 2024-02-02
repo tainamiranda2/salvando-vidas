@@ -5,7 +5,7 @@ import escova from '../../img/escova.png';
 import lapiz from '../../img/lapiz.png';
 import luva from '../../img/luva.png';
 
-export const Jogo = () => {
+export const faseThree = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageClick = (image) => {
@@ -15,6 +15,7 @@ export const Jogo = () => {
   return (
     <>
       <h1>Salvados vidas</h1>
+      <h2>Fase 3</h2>
       <div className="container">
         <p className="balao">O Professor José está caído. Quais as medidas que devem ser tomadas para os primeiros socorros?</p>
         <div className="images-container">
