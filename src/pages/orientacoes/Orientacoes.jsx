@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { useNavigate} from 'react-router-dom';
 import img2 from '../../img/img2.png';
+import img3 from '../../img/img3.png';
+import './Orientacoes.css'
+
 export const Orientacoes = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const history = useNavigate();
@@ -23,24 +26,26 @@ export const Orientacoes = () => {
     }
   };
 
-  const handleBack = () => {
+ /* const handleBack = () => {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
     }
   };
+  */
   return (
     <div className="orientacoes-container">
-      <h1>Orientações</h1>
+     
       <img src={img2} alt="Descrição da Imagem" className="card-imagem" />
       <div className="balao-container">
         <p className="balao">{baloes[currentStep]}</p>
         <button className="button-next" onClick={handleNext}>
           NEXT
         </button>
-        <button className="button-back" onClick={handleBack}>
-            VOLTAR
-          </button>
+       
       </div>
+      <div className="footer-container">
+    <img src={img3} className="img3" alt="Descrição da Imagem" />
+  </div>
     </div>
   );
 };
