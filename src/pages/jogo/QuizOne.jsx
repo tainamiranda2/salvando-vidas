@@ -1,29 +1,34 @@
 
-import { useState } from 'react';
+//import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import homem from '../../img/homem.jpg';
+import vitoria from '../../img/vitoria.jpg';
 
 export const QuizOne = () => {
-  const navigate = useNavigate();
-  const [isSceneSafe, setIsSceneSafe] = useState(null);
+ const navigate = useNavigate();
 
-  const handleEvaluateScene = () => {
-    if (isSceneSafe === true) {
+//  const [isSceneSafe, setIsSceneSafe] = useState(null);
+
+  const handleEvaluateScene = (dado) => {
+    if (dado === true) {
       // Leva para a página se o ambiente estiver seguro
-      navigate('/faseOne');
-    } 
+      navigate('/FaseOne');
+    } else{
+      alert("Avalie novamente a cena!")
+    }
   };
 
   return (
-    <div>
+    <div> 
+      <img src={vitoria} className="img3" alt="Descrição da Imagem" />
+
+
+          <img src={homem} className="img3" alt="Descrição da Imagem" />
+
       <h1>O ambiente está seguro?</h1>
-      <button onClick={() => setIsSceneSafe(true)}>Sim</button>
-      <button onClick={() => setIsSceneSafe(false)}>Não</button>
-      {isSceneSafe !== null && (
-        <div>
-          <p>A cena está {isSceneSafe ? 'segura' : 'não segura'}!</p>
-          <button onClick={handleEvaluateScene}>Avaliar cena</button>
-        </div>
-      )}
+      <button onClick={() => handleEvaluateScene(true)}>Sim</button>
+      <button onClick={() => handleEvaluateScene(false)}>Não</button>
+     
     </div>
   );
 };

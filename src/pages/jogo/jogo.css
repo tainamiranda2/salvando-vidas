@@ -1,0 +1,41 @@
+.fase-one-container {
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .image-item {
+    width: 100px; /* Ajuste conforme necessário */
+    height: 100px; /* Ajuste conforme necessário */
+    cursor: pointer;
+  }
+  
+  .image-item.selected {
+    border: 2px solid orange; /* Cor laranja para imagem selecionada */
+  }
+  
+  .image-item.correct {
+    border: 2px solid green; /* Cor verde para resposta correta */
+  }
+  
+  .image-item.incorrect {
+    border: 2px solid red; /* Cor vermelha para resposta incorreta */
+  }
+  
+  .button-next {
+    margin-top: 20px; /* Espaçamento superior para o botão "Next" */
+  }
+  
