@@ -72,21 +72,6 @@ color: #ae332e;
 
 }
 
-.images-container {
-  background: #354aa7;
-  display: flex;
-  justify-content: space-around;
-}
-
-.images-container img {
-  width: 100px; /* Ajuste o tamanho conforme necessário */
-  cursor: pointer;
-  transition: border 0.3s ease; /* Adiciona uma transição suave na mudança da borda */
-}
-
-.images-container img.selected {
-  border: 2px solid white;
-}
 /*formulario*/
 form {
   display: flex;

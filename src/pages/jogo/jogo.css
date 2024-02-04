@@ -1,42 +1,64 @@
+/*css do quiz*/
+.img-container {
+  justify-content: space-around; /* Ajuste conforme necessário */
+  align-items: center; /* Ajuste conforme necessário */
+}
 
+.img3 {
+  width: 200px ;
+  height: 300px;
+}
+
+/*css da fase*/
 .fase-one-container {
-    text-align: center;
-  }
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .images-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-  
-  .image-item {
-    width: 100px; /* Ajuste conforme necessário */
-    height: 100px; /* Ajuste conforme necessário */
-    cursor: pointer;
-  }
-  
-  .image-item.selected {
-    border: 2px solid orange; /* Cor laranja para imagem selecionada */
-  }
-  
-  .image-item.correct {
-    border: 2px solid green; /* Cor verde para resposta correta */
-  }
-  
-  .image-item.incorrect {
-    border: 2px solid red; /* Cor vermelha para resposta incorreta */
-  }
-  
-  .button-next {
-    margin-top: 20px; /* Espaçamento superior para o botão "Next" */
-  }
-  
+
+  text-align: center;
+}
+
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #354aa7;
+}
+
+.image-item {
+  width: 30%;
+  margin: 8px;
+  position: relative;
+}
+
+.image-item img {
+  width: 100%;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.image-item.selected::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 2px solid black; /* Alterei para preto quando a imagem é clicada */
+  box-sizing: border-box;
+}
+
+.image-item.correct img {
+  border-color: green;
+}
+
+.image-item.incorrect img {
+  border-color: red;
+}
+
+.button-next {
+  margin-top: 16px;
+}
