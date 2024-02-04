@@ -12,7 +12,7 @@ import maca from '../../img/maca.png';
 import soro from '../../img/soro.png';
 import marcara from '../../img/marcara.png';
 
-import './Jogo.css' // Importe o arquivo de estilos CSS
+//import './Jogo.css' // Importe o arquivo de estilos CSS
 
 export const FaseOne = () => {
   const navigate = useNavigate();
