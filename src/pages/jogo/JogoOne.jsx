@@ -4,7 +4,7 @@ import './Jogo.css'
 export const JogoOne=()=>{
     return (
         <div>
-              <img src={gitMassagem } className="img3" alt="Descrição da Imagem" />
+              <img src={gitMassagem } className="img3" alt="Descrição da Imagemm" />
 
         </div>
     )
