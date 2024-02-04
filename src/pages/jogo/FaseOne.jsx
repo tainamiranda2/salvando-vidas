@@ -11,7 +11,7 @@ import maca from '../../img/maca.png';
 import soro from '../../img/soro.png';
 import marcara from '../../img/marcara.png';
 
-import './Jogo.css';
+import './Jogo.css'
 
 export const FaseOne = () => {
   const navigate = useNavigate();
