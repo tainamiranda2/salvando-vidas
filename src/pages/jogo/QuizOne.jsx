@@ -3,7 +3,7 @@
 import { useNavigate } from 'react-router-dom';
 import homem from '../../img/homem.jpg';
 import vitoria from '../../img/vitoria.jpg';
-import './Jogo.css'
+//import './Jogo.css'
 
 export const QuizOne = () => {
  const navigate = useNavigate();
