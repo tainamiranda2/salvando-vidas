@@ -1,5 +1,5 @@
 import gitMassagem from '../../img/gitMassagem.gif';
-import './Jogo.css'
+//import './Jogo.css'
 
 export const JogoOne=()=>{
     return (
