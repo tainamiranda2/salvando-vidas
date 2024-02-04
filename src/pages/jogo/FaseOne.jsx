@@ -7,7 +7,7 @@ import escova from '../../img/escova.png';
 import lapiz from '../../img/lapiz.png';
 import luva from '../../img/luva.png';
 
-import DEA from '../../img/Dea.png';
+import DEA from '../../img/DEA.png';
 import maca from '../../img/maca.png';
 import soro from '../../img/soro.png';
 import marcara from '../../img/marcara.png';
