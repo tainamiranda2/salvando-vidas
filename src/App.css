@@ -65,12 +65,38 @@ color: #ae332e;
   border-style: solid;
   border-color: #fff transparent transparent transparent;
 }
-/*css do jogo*/
-.container {
-  text-align: center;
-  padding: 20px;
+/*css do quiz*/
+.quadrado-quiz{
+  display: flex;
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: center; 
 
 }
+.quadrado-constainer{
+  background: #354aa7;
+width: 500px;
+align-items: center;
+height: 500px; /* Ajuste conforme necessário */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; 
+  margin: 15px;
+}
+.quadrado-constainer button{
+  background: #ffbd59;
+}
+.quadrado-constainer .questao{
+ background: #ae332e; 
+ border-radius: 20px;
+ padding: 10px;
+ width: 100px;
+ font-size: 30px;
+ text-align: center;
+}
+
+/*css do jogo*/
+
 
 /*formulario*/
 form {
@@ -116,22 +142,17 @@ select {
 }
 
 /*css da fase*/
-.fase-one-container {
-
-  text-align: center;
-}
-
-
-.container {
+.container-fase {
   max-width: 600px;
   margin: 0 auto;
+  background: #ae332e;
 }
 
 .images-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: #354aa7;
+ 
 }
 
 .image-item {

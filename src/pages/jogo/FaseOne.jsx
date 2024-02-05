@@ -18,7 +18,8 @@ export const FaseOne = () => {
   const [selectedImages, setSelectedImages] = useState([]);
   const [images, setImages] = useState([]);
   const [showResults, setShowResults] = useState(false);
- // const correctAnswers = ['luva', 'escova'];
+ const [avisoCerto, setAvisoCerto]=useState("C");
+ const [avisoErrado, setAvisoErrado]=useState("E");
   const correctAnswers = ['/src/img/luva.png', '/src/img/escova.png'];
 
   useEffect(() => {
@@ -42,20 +43,14 @@ export const FaseOne = () => {
   const handleNextClick = () => {
     // Verifique as respostas e navegue para a próxima página
     const isCorrect = selectedImages.every((selectedImage) => correctAnswers.includes(selectedImage));
-   // console.log('isCorrect:', isCorrect);
-    //console.log('selectedImages:', selectedImages);
     
     if (isCorrect) {
       setShowResults(true);
-      // Adicione lógica de navegação para a próxima página
       navigate('/JogoOne');
 
     } else {
       setShowResults(true);
-      // Adicione lógica para lidar com resposta incorreta, se necessário
-      alert("Tente novamente!")
-     // navigate('/FaseOne');
-   //  window.location.reload();
+  
    setSelectedImages([])
     }
   };
@@ -74,9 +69,10 @@ export const FaseOne = () => {
     <div className="fase-one-container">
       <h1>Salvados vidas</h1>
       <h2>Fase 1</h2>
-
-      <div className="container">
-        <p className="balao">Tenho algumas coisas disponíveis na mochila para nossa segurança.</p>
+      <p className="balao">Tenho algumas coisas disponíveis na mochila para nossa segurança.</p>
+      <div className="container-fase">
+        <p>{avisoCerto}</p>
+        <p>{avisoErrado}</p>
         <div className="images-container">
           {images.map((image, index) => (
             <img
@@ -87,6 +83,7 @@ export const FaseOne = () => {
               onClick={() => handleImageClick(image)}
             />
           ))}
+
         </div>
       </div>
       <button className="button-next" onClick={handleNextClick}>
