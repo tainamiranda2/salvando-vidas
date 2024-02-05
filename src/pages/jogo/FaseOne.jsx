@@ -42,8 +42,8 @@ export const FaseOne = () => {
   const handleNextClick = () => {
     // Verifique as respostas e navegue para a próxima página
     const isCorrect = selectedImages.every((selectedImage) => correctAnswers.includes(selectedImage));
-    console.log('isCorrect:', isCorrect);
-    console.log('selectedImages:', selectedImages);
+   // console.log('isCorrect:', isCorrect);
+    //console.log('selectedImages:', selectedImages);
     
     if (isCorrect) {
       setShowResults(true);
@@ -55,7 +55,8 @@ export const FaseOne = () => {
       // Adicione lógica para lidar com resposta incorreta, se necessário
       alert("Tente novamente!")
      // navigate('/FaseOne');
-     window.location.reload();
+   //  window.location.reload();
+   setSelectedImages([])
     }
   };
 
