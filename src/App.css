@@ -95,9 +95,6 @@ height: 500px; /* Ajuste conforme necessário */
  text-align: center;
 }
 
-/*css do jogo*/
-
-
 /*formulario*/
 form {
   display: flex;
@@ -142,17 +139,48 @@ select {
 }
 
 /*css da fase*/
+.fase-container{
+display: flex;
+}
+.fase-one-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+}
+
+.card-imagem {
+  max-width: 300px; /* Ajuste conforme necessário */
+  margin-right: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.text-container {
+  flex: 1; /* Ocupa o restante do espaço disponível */
+}
+
 .container-fase {
   max-width: 600px;
   margin: 0 auto;
   background: #ae332e;
 }
 
+.certo-fase {
+  background: #354aa7;
+  border-radius: 20px;
+  padding: 10px;
+  width: 100px;
+  font-size: 30px;
+  text-align: center;
+}
+
 .images-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
- 
 }
 
 .image-item {
@@ -163,7 +191,7 @@ select {
 
 .image-item img {
   width: 100%;
-  border: 2px solid transparent;
+  border: 20px solid transparent;
   transition: border-color 0.3s ease-in-out;
 }
 
@@ -174,18 +202,14 @@ select {
   right: 0;
   bottom: 0;
   left: 0;
-  border: 2px solid black; /* Alterei para preto quando a imagem é clicada */
+  border: 2px solid #354aa7; /* Alterei para preto quando a imagem é clicada */
   box-sizing: border-box;
 }
 
-.image-item.correct img {
-  border-color: green;
-}
-
-.image-item.incorrect img {
-  border-color: red;
-}
-
-.button-next {
-  margin-top: 16px;
+/*css do jogo*/
+ img.gif-massagem {
+  animation-play-state: paused !important;
+  padding: 20px;
+  width: 300px;
+  align-items: center;
 }
