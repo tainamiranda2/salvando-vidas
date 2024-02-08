@@ -1,12 +1,14 @@
 body{
  background: #ffbd59;
  color: #fff;
+ 
 }
 /*card principal*/
 
 .card-container {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .card-imagem {
@@ -15,8 +17,11 @@ body{
 }
 
 .card-segundario {
-  display: block;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
 }
 button{
   background: #354aa7;
@@ -37,22 +42,22 @@ width: 250px;
 
 }
 /*css da orientaçaõ*/
-
 .button-next{
 border: none;
+float: left;
 background: #fff;
 color: #ae332e;
 }
 .balao {
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   position: relative;
-  max-width: 300px;
-  padding: 15px;
+  width: 400px;
+  padding: 50px;
   margin: 10px;
   background-color: #fff;
   color: #000;
-  border-radius: 10px;
+  border-radius: 90px;
 }
 
 .balao::before {
@@ -60,11 +65,35 @@ color: #ae332e;
   position: absolute;
   top: 100%;
   left: 50%;
-  margin-left: -10px;
+  margin-left: -195px;
   border-width: 10px;
   border-style: solid;
   border-color: #fff transparent transparent transparent;
 }
+
+.orientacoes-container{
+display: flex;
+
+}
+  
+.balao-container {
+  justify-content: flex-end;
+ display: block;
+
+}
+.orientacoes-home{
+justify-content: flex-end;
+justify-items: flex-end;
+}
+.card-imagem-logo{
+  width: 300px;
+height: 200px;
+}
+.footer{
+
+  margin-top: 200px;
+}
+
 /*css do quiz*/
 .quadrado-quiz{
   display: flex;
@@ -93,6 +122,9 @@ height: 500px; /* Ajuste conforme necessário */
  width: 100px;
  font-size: 30px;
  text-align: center;
+}
+.cena-one{
+  width: 200px;
 }
 
 /*formulario*/
@@ -131,12 +163,10 @@ select {
 .img-container {
   justify-content: space-around; /* Ajuste conforme necessário */
   align-items: center; /* Ajuste conforme necessário */
+  display: flex;
 }
 
-.img3 {
-  width: 200px ;
-  height: 300px;
-}
+
 
 /*css da fase*/
 .fase-container{
@@ -212,4 +242,10 @@ display: flex;
   padding: 20px;
   width: 300px;
   align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+   .card-imagem {
+    display: none;
+  }
 }

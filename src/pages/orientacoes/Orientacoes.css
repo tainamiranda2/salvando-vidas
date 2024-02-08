@@ -1,22 +1,2 @@
 
   
-  .balao-container {
-    padding: 20px;
-    width: 500px;
-    margin-left: 50%; 
-   
-  }
-  
-  .card-imagem {
-    width: 300px; /* Ajuste o tamanho conforme necessário */
-  }
-  
-
-  
-  .footer-container {
-    margin-top: auto; /* Empurra o container para o final do pai (rodapé) */
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  

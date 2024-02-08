@@ -35,16 +35,16 @@ export const Orientacoes = () => {
   return (
     <div className="orientacoes-container">
      
-      <img src={img2} alt="Descrição da Imagem" className="card-imagem" />
+      <img src={img2} alt="Descrição da Imagem" className="card-imagem-logo" />
+      <div className='orientacoes-home'>
       <div className="balao-container">
         <p className="balao">{baloes[currentStep]}</p>
         <button className="button-next" onClick={handleNext}>
           NEXT
         </button>
-       
-      </div>
-      <div className="footer-container">
-    <img src={img3} className="img3" alt="Descrição da Imagem" />
+       </div>
+
+    <img src={img3} className="footer" alt="Descrição da Imagem" />
   </div>
     </div>
   );
