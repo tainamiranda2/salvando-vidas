@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import gitMassagem from '../../img/gitMassagem.gif';
+import homem from '../../img/homem.png';
+import vitoria from '../../img/vitoria.png';
+import cardio from '../../img/cardio.webp';
 
 export const JogoOne = () => {
   const navigate = useNavigate();
   const [count, setCount] = useState(0);
-  const [gifPlaying, setGifPlaying] = useState(false);
+  const [showVitoria, setShowVitoria] = useState(true);
+  const [showHomem, setShowHomem] = useState(true);
+  const [showCardio, setShowCardio] = useState(false);
   const [parada, setParada] = useState(false);
   const [timeElapsed, setTimeElapsed] = useState(0);
   const [currentStep, setCurrentStep] = useState(0);
@@ -26,15 +30,18 @@ export const JogoOne = () => {
 
   useEffect(() => {
     if (count === 10) {
-      setGifPlaying(false);
-      navigate('/');
+      setShowVitoria(true);
+      setShowHomem(true);
+      setShowCardio(false);
+      setParada(false);
     }
-  }, [count, navigate]);
-  
+  }, [count]);
 
   const handleButtonClick = () => {
-    if (!gifPlaying) {
-      setGifPlaying(true);
+    if (!showCardio) {
+      setShowVitoria(false);
+      setShowHomem(false);
+      setShowCardio(true);
     }
     setCount(prevCount => prevCount + 1);
   };
@@ -42,8 +49,8 @@ export const JogoOne = () => {
   const handleNextStep = () => {
     if (currentStep < atendimentos.length - 1) {
       setCurrentStep(prevStep => prevStep + 1);
-    }else{
-        setParada(true)
+    } else {
+      setParada(true);
     }
   };
 
@@ -52,6 +59,7 @@ export const JogoOne = () => {
       {parada === false ? (
         <div>
           <h1>Personagem Vitória: O Jogador de Atendimento</h1>
+
           <h2>Passo {currentStep + 1}</h2>
           <p>{atendimentos[currentStep]}</p>
           <button onClick={handleNextStep}>Próximo Passo</button>
@@ -60,10 +68,14 @@ export const JogoOne = () => {
         <div>
           <p>Voce pegou estes equipamento, é hora de realizar ação colocando em ordem alguns passos.</p>
           <p>Pegue </p>
-          <img src={gitMassagem} className="git-massagem" alt="Descrição da Imagemm" />
+          {showVitoria && <img src={vitoria} className="cena-one" alt="Descrição da Imagem" />}
+          {showHomem && <img src={homem} className="cena-one" alt="Descrição da Imagem" />}
+          {showCardio && <img src={cardio} className="cena-one-cardio" alt="Descrição da Imagem" />}
+
           <button onClick={handleButtonClick}>Apertar</button>
-          <p>Clques: {count}</p>
+          {/* <p>Clques: {count}</p>
           <p>Tempo decorrido: {timeElapsed} segundos</p>
+          */}
         </div>
       )}
     </>

@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import img2 from '../../img/img2.png';
+import img3 from '../../img/img3.png';
+
 import bolsa from '../../img/bolsa.png';
 import casaco from '../../img/casaco.png';
 import escova from '../../img/escova.png';
@@ -13,22 +15,21 @@ import marcara from '../../img/marcara.png';
 import carteira from '../../img/carteira.png';
 import caderno from '../../img/caderno.png';
 import poket from '../../img/poket.png';
-
-//import './Jogo.css'
+import rcp from '../../img/rcp.png';
+import certoErrado from '../../img/certo-errado.png';
 
 export const FaseOne = () => {
   const navigate = useNavigate();
   const [selectedImages, setSelectedImages] = useState([]);
   const [images, setImages] = useState([]);
   const [showResults, setShowResults] = useState(false);
- const [avisoCerto, setAvisoCerto]=useState("?");
   const correctAnswers = ['/src/img/luva.png', '/src/img/marcara.png'];
-//const parte1=['/src/img/marcara.png'];
-//const parte2=['/src/img/luva.png'];
 
   useEffect(() => {
-    // Embaralhar as imagens antes de renderizar o componente
-    const shuffledImages = shuffleArray([bolsa, casaco, escova, luva, maca, DEA, marcara, lapiz, carteira, soro, poket, caderno]);
+    const shuffledImages = shuffleArray([
+      bolsa, casaco, escova, luva, maca, DEA,
+      marcara, lapiz, carteira, soro, poket, caderno
+    ]);
     setImages(shuffledImages);
   }, []);
 
@@ -45,7 +46,6 @@ export const FaseOne = () => {
   };
 
   const handleNextClick = () => {
-    // Verifique as respostas e navegue para a próxima página
     const isCorrect = selectedImages.every((selectedImage) => correctAnswers.includes(selectedImage));
     
     if (isCorrect) {
@@ -53,13 +53,10 @@ export const FaseOne = () => {
       navigate('/JogoOne');
     } else {
       setShowResults(true);
-   
-      setAvisoCerto("Errado")
-   setSelectedImages([])
+      setSelectedImages([]);
     }
   };
 
-  // Função para embaralhar um array
   const shuffleArray = (array) => {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
@@ -70,37 +67,33 @@ export const FaseOne = () => {
   };
 
   return (
-    
     <div className="fase-one-container">
-    <h2>Fase 1</h2>
-    <div className="image-container">
-      <img src={img2} alt="Descrição da Imagem" className="card-imagem" />
-      <div className="text-container">
-        <h1>C R P</h1>
-        <p>Salvando vidas</p>
-        <p className="balao">Tenho algumas coisas disponíveis na mochila para nossa segurança.</p>
+      <div className="image-container">
+        <img src={img2} alt="Descrição da Imagem" className="card-imagem-fase" />
+        <img src={rcp} className="rcp" alt="Descrição da Imagem" />
       </div>
-    </div>
-  
-    <div className="container-fase">
-      <p className='certo-fase'>{avisoCerto}</p>
-      <div className="images-container">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Imagem ${index + 1}`}
-            className={`image-item ${showResults && correctAnswers.includes(image) ? 'correct' : ''} ${selectedImages.includes(image) ? 'selected' : ''}`}
-            onClick={() => handleImageClick(image)}
-          />
-        ))}
+      <div className='fase-one-balao'>   
+        <p className="balao" style={{width: "150px", height: '50px', padding: '30px'}}>Tenho algumas coisas disponíveis na mochila para nossa segurança.</p>
+        <div className="container-fase">
+          <img className='certo-fase' src={certoErrado}/>
+          <div className="images-container">
+          {images.map((image, index) => (
+  <img
+    key={index}
+    src={image}
+    alt={`Imagem ${index + 1}`}
+    className={`image-item ${showResults && correctAnswers.includes(image) ? 'correct' : ''} ${selectedImages.includes(image) && !correctAnswers.includes(image) ? 'incorrect' : ''} ${showResults && selectedImages.includes(image) && correctAnswers.includes(image) ? 'selected-correct' : ''}`}
+    onClick={() => handleImageClick(image)}
+  />
+))}
+
+          </div>
+        </div>
       </div>
+      <button className="button-next" onClick={handleNextClick}>
+        Next
+      </button>
+      <img src={img3} alt="Descrição da Imagem" />
     </div>
-    
-    <button className="button-next" onClick={handleNextClick}>
-      Next
-    </button>
-  </div>
-  
   );
 };

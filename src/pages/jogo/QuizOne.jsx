@@ -29,8 +29,10 @@ export const QuizOne = () => {
       <div className='quadrado-constainer'>
         <p className='questao'>{aviso}</p>
       <h1>O ambiente está seguro?</h1>
+      <div className='button-quiz-one'>
       <button onClick={() => handleEvaluateScene(true)}>Sim</button>
       <button onClick={() => handleEvaluateScene(false)}>Não</button>
+      </div>
       </div>
       </div>
   );

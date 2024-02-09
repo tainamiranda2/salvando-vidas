@@ -60,7 +60,7 @@ color: #ae332e;
   border-radius: 90px;
 }
 
-.balao::before {
+/*.balao::before {
   content: '';
   position: absolute;
   top: 100%;
@@ -70,7 +70,7 @@ color: #ae332e;
   border-style: solid;
   border-color: #fff transparent transparent transparent;
 }
-
+*/
 .orientacoes-container{
 display: flex;
 
@@ -103,7 +103,7 @@ height: 200px;
 }
 .quadrado-constainer{
   background: #354aa7;
-width: 500px;
+width: 400px;
 align-items: center;
 height: 500px; /* Ajuste conforme necessário */
   display: flex;
@@ -127,14 +127,18 @@ height: 500px; /* Ajuste conforme necessário */
   width: 200px;
 }
 
+.button-quiz-one{
+ display: flex
+}
 /*formulario*/
 form {
   display: flex;
 flex-direction: column;
 background: #354aa7;
-
+border-radius: 30px;
   align-items: center; 
   margin-top: 20px; 
+  margin:30px;
 }
 
 fieldset {
@@ -158,7 +162,10 @@ select {
   padding: 8px;
   box-sizing: border-box;
 }
+.perfil{
+  width: 30px;
 
+}
 /*css do quiz*/
 .img-container {
   justify-content: space-around; /* Ajuste conforme necessário */
@@ -181,21 +188,22 @@ display: flex;
 .image-container {
   display: flex;
   align-items: center;
+  justify-content:space-between;
 }
 
-.card-imagem {
-  max-width: 300px; /* Ajuste conforme necessário */
-  margin-right: 20px; /* Espaço entre a imagem e o texto */
+.card-imagem-fase {
+  max-width: 200px; /* Ajuste conforme necessário */
+  margin-right: 400px; /* Espaço entre a imagem e o texto */
 }
 
 .text-container {
-  flex: 1; /* Ocupa o restante do espaço disponível */
+  flex: 1; 
 }
 
 .container-fase {
   max-width: 600px;
-  margin: 0 auto;
-  background: #ae332e;
+  background: #354aa7;
+
 }
 
 .certo-fase {
@@ -203,8 +211,8 @@ display: flex;
   border-radius: 20px;
   padding: 10px;
   width: 100px;
-  font-size: 30px;
-  text-align: center;
+  margin-left: 230px;
+  align-items: center;
 }
 
 .images-container {
@@ -214,26 +222,29 @@ display: flex;
 }
 
 .image-item {
-  width: 30%;
+  width: calc(25% - 16px); /* 25% da largura da linha menos a margem entre as imagens */
   margin: 8px;
+   border-radius: 40px;
   position: relative;
+  
 }
 
-.image-item img {
-  width: 100%;
-  border: 20px solid transparent;
-  transition: border-color 0.3s ease-in-out;
+.image-item.incorrect {
+ border: 10px solid transparent;
+  background: #ae332e;
+}
+.image-item.selected-correct{
+  border: 10px solid transparent;
+  background: #3bae2e;
 }
 
-.image-item.selected::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border: 2px solid #354aa7; /* Alterei para preto quando a imagem é clicada */
-  box-sizing: border-box;
+
+img .image-item{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave quando a imagem é clicada */
+}
+
+.fase-one-balao{
+  display: flex;
 }
 
 /*css do jogo*/
@@ -248,4 +259,26 @@ display: flex;
    .card-imagem {
     display: none;
   }
+
+  /*responsivo do quiz*/
+
+  .quadrado-constainer{
+width: 200px;
+height: 300px;
+  }
+  .quadrado-quiz{
+  display: inline;
+  }
+  .image-container {
+    display: none;
+  }
+  .fase-one-balao{
+    display: block;
+  }
+  .image-item {
+    width: 30%;
+    margin: 8px;
+    position: relative;
+  }
+  
 }
