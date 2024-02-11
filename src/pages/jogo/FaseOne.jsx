@@ -23,8 +23,12 @@ export const FaseOne = () => {
   const [selectedImages, setSelectedImages] = useState([]);
   const [images, setImages] = useState([]);
   const [showResults, setShowResults] = useState(false);
-  const correctAnswers = ['/src/img/luva.png', '/src/img/marcara.png'];
-
+  //jogador escolheu luva e mascara
+  const JogoOne = ['/src/img/luva.png', '/src/img/marcara.png'];
+  //jogador escolheu LUVA, MÁSCARA, BOLSA VALVULA MÁSCARA
+  const jogoTwo=['/src/img/luva.png', '/src/img/marcara.png', '/src/img/bolsa.png']
+//jogador ESCOLHEU LUVA, MÁSCARA, BOLSA VALVULA MÁSCARA E DEA
+const jogoThree=['/src/img/luva.png', '/src/img/marcara.png', '/src/img/bolsa.png', '/src/img/DEA.png']
   useEffect(() => {
     const shuffledImages = shuffleArray([
       bolsa, casaco, escova, luva, maca, DEA,
@@ -46,17 +50,21 @@ export const FaseOne = () => {
   };
 
   const handleNextClick = () => {
-    const isCorrect = selectedImages.every((selectedImage) => correctAnswers.includes(selectedImage));
-    
-    if (isCorrect) {
+    if (selectedImages.every(image => JogoOne.includes(image))) {
       setShowResults(true);
       navigate('/JogoOne');
+    } else if (selectedImages.every(image => jogoTwo.includes(image))) {
+      setShowResults(true);
+      navigate('/JogoTwo');
+    } else if (selectedImages.every(image => jogoThree.includes(image))) {
+      setShowResults(true);
+      navigate('/JogoThree');
     } else {
       setShowResults(true);
       setSelectedImages([]);
     }
   };
-
+  
   const shuffleArray = (array) => {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
@@ -82,7 +90,7 @@ export const FaseOne = () => {
     key={index}
     src={image}
     alt={`Imagem ${index + 1}`}
-    className={`image-item ${showResults && correctAnswers.includes(image) ? 'correct' : ''} ${selectedImages.includes(image) && !correctAnswers.includes(image) ? 'incorrect' : ''} ${showResults && selectedImages.includes(image) && correctAnswers.includes(image) ? 'selected-correct' : ''}`}
+    className={`image-item ${showResults && JogoOne.includes(image) ? 'correct' : ''} ${selectedImages.includes(image) && !JogoOne.includes(image) ? 'incorrect' : ''} ${showResults && selectedImages.includes(image) && JogoOne.includes(image) ? 'selected-correct' : ''}`}
     onClick={() => handleImageClick(image)}
   />
 ))}

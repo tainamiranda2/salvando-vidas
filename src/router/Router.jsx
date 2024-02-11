@@ -9,6 +9,8 @@ import { JogoOne } from '../pages/jogo/JogoOne'
 import { Cadastro } from '../pages/cadastro/Cadastro'
 import { Idealizadores } from '../pages/idealizadores/Idealizadores'
 import { Orientacoes } from '../pages/orientacoes/Orientacoes'
+import { JogoThree } from '../pages/jogo/JogoThree'
+import { JogoTwo } from '../pages/jogo/JogoTwo'
 
 const Router= () => {
     return (
@@ -21,7 +23,8 @@ const Router= () => {
     <Route path='/QuizOne' element={<QuizOne/>}/>
     <Route path='/FaseOne' element={<FaseOne/>}/>
     <Route path='/JogoOne' element={<JogoOne/>}/>
-
+    <Route path='/JogoTwo' element={<JogoTwo/>}/>
+    <Route path='/JogoThree' element={<JogoThree/>}/>
     <Route path='/idealizadores' element={<Idealizadores/>}/>
 
 </Routes>

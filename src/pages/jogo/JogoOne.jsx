@@ -3,6 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import homem from '../../img/homem.png';
 import vitoria from '../../img/vitoria.png';
 import cardio from '../../img/cardio.webp';
+import joelho from '../../img/joelho.png';
+import respiracao from '../../img/respiracao.png';
+
+
+
 
 export const JogoOne = () => {
   const navigate = useNavigate();
@@ -16,9 +21,10 @@ export const JogoOne = () => {
   const atendimentos = [
     "Vai andando até a vítima, se paramenta com luvas e máscara",
     "Personagem Vitória ficará de joelhos ao lado da vítima",
-    "Personagem Vitória colocará suas duas mãos nos ombros da vítima",
-    "Personagem Vitória checará responsividade falando “Senhor, senhor, você me escuta?”"
+    "Personagem Vitória colocará suas duas mãos nos ombros da vítima"
   ];
+const equipamentos=['/src/img/luva.png', '/src/img/joelho.png', '/src/img/respiracao.png'];
+
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -62,6 +68,7 @@ export const JogoOne = () => {
 
           <h2>Passo {currentStep + 1}</h2>
           <p>{atendimentos[currentStep]}</p>
+<img src={ equipamentos[currentStep]} />
           <button onClick={handleNextStep}>Próximo Passo</button>
         </div>
       ) : (
