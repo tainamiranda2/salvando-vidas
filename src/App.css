@@ -254,7 +254,10 @@ img .image-item{
   width: 300px;
   align-items: center;
 }
-
+.cena-one-cardio{
+  width: 400px;
+  margin: 10x;
+}
 @media screen and (max-width: 600px) {
    .card-imagem {
     display: none;
