@@ -76,7 +76,9 @@ export const JogoOne = () => {
 
           <h2>Passo {currentStep + 1}</h2>
           <p>{atendimentos[currentStep]}</p>
+          <img src={vitoria}/>
           <img src={ equipamentos[currentStep]} />
+          <img src={homem}/>
           <button onClick={handleNextStep}>Próximo Passo</button>
         </div>
       ) : (

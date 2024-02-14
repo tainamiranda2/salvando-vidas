@@ -1,7 +1,14 @@
 body{
- background: #ffbd59;
+  box-sizing: border-box;
  color: #fff;
  
+}
+.img-fundo{
+  width: 100%;
+  background-image: url('../src/img/escola.jpg');
+  background-size: cover; 
+  background-position: center; 
+  height: 100vh;
 }
 /*card principal*/
 
