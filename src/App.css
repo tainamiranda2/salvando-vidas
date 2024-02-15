@@ -1,15 +1,12 @@
 body{
-  box-sizing: border-box;
  color: #fff;
- 
+ width: 100%;
+ background-image: url('../src/img/escola.jpg');
+ background-size: cover; 
+ background-position: center; 
+ height: 100vh;
 }
-.img-fundo{
-  width: 100%;
-  background-image: url('../src/img/escola.jpg');
-  background-size: cover; 
-  background-position: center; 
-  height: 100vh;
-}
+
 /*card principal*/
 
 .card-container {
@@ -98,7 +95,7 @@ height: 200px;
 }
 .footer{
 
-  margin-top: 200px;
+  margin-top: 10px;
 }
 
 /*css do quiz*/
@@ -190,6 +187,8 @@ display: flex;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .image-container {
@@ -265,6 +264,21 @@ img .image-item{
   width: 400px;
   margin: 10x;
 }
+
+.personagem {
+  width: 100px; /* largura da imagem */
+  height: 150px; /* altura da imagem */
+  background-image: url('../src/img/vitoria.png'); /* caminho da sua imagem */
+  background-size: cover; /* redimensiona a imagem para cobrir todo o contêiner */
+  position: relative; /* permite mover a imagem dentro do contêiner */
+  animation: caminhada 4s steps(2) infinite; /* animação de caminhada */
+}
+
+@keyframes caminhada {
+  0% { background-position: 0 0; } /* primeira etapa da caminhada */
+  100% { background-position: -600px 0; } /* última etapa da caminhada */
+}
+
 @media screen and (max-width: 600px) {
    .card-imagem {
     display: none;
