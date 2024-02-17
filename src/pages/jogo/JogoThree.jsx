@@ -3,10 +3,9 @@
 
 import { useState, useEffect } from 'react';
 
-import homem from '../../img/homem.png';
 import vitoria from '../../img/vitoria.png';
 import cardio from '../../img/cardio.webp';
-import ventilacao from '../../img/Ventilacao.jpg';
+import ventilacao from '../../img/ventilacao.png';
 import Dea from '../../img/DEA.png';
 
 export const JogoThree = () => {
@@ -14,9 +13,8 @@ export const JogoThree = () => {
   const [count, setCount] = useState(0);
   const [countVentilcao, setVentilcao] = useState(0);
   const [parada, setParada] = useState(false);
-  const [countDea, setDea] = useState(0);
+//  const [countDea, setDea] = useState(0);
   const [showVitoria, setShowVitoria] = useState(true);
-  const [showHomem, setShowHomem] = useState(true);
   const [showCardio, setShowCardio] = useState(false);
   
   const [timeElapsed, setTimeElapsed] = useState(0);
@@ -27,7 +25,8 @@ export const JogoThree = () => {
     "Personagem Vitória ficará de joelhos ao lado da vítima",
     "Personagem Vitória colocará suas duas mãos nos ombros da vítima"
   ];
-  const equipamentos=['/src/img/luva.png', '/src/img/joelho.png', '/src/img/bolsa.png', '/src/img/respiracao.png'];
+  const equipamentos=['/src/img/novaVitoria.png', '/src/img/joelhos.png', '/src/img/checar.png'];
+
   useEffect(() => {
     if (timerRunning) {
       const timer = setInterval(() => {
@@ -43,14 +42,14 @@ export const JogoThree = () => {
       setTimerRunning(false);
       alert('PARABÉNS! VOCÊ SALVOU UMA PESSOA!')
     } else if (timeElapsed > 60) {
+      alert('Deve iniciar novamente RCP, pois o jogador não consiguiu salvar a vítima.')
+
       // Reiniciar as compressões se o tempo decorrido for superior a 1 minuto
       setCount(0);
       setVentilcao(0);
-      countDea(0)
       setTimerRunning(false);
       setParada(false); // Volte para a etapa inicial se necessário
       setShowVitoria(true);
-      setShowHomem(true);
       setShowCardio(false);
       setTimeElapsed(0)
     }
@@ -59,7 +58,6 @@ export const JogoThree = () => {
   const handleButtonClick = () => {
     if (!showCardio) {
       setShowVitoria(false);
-      setShowHomem(false);
       setShowCardio(true);
       setTimerRunning(true); // Iniciar o temporizador quando as compressões começarem
     }
@@ -80,37 +78,35 @@ export const JogoThree = () => {
   }
 
   
-  const handleDea=()=>{
+ /* const handleDea=()=>{
     setDea(prevCount => prevCount + 1);
   }
-
+*/
   return (
     <>
       {parada === false ? (
         <div>
-          <h1>Personagem Vitória: O Jogador de Atendimento</h1>
+          <h1>O Jogador escolheu luvas, mascara e bolsa valvula e DEA.</h1>
 
           <h2>Passo {currentStep + 1}</h2>
           <p>{atendimentos[currentStep]}</p>
-          <img src={ equipamentos[currentStep]} />
+          <img className='img-jogo-one' src={ equipamentos[currentStep]} />
           <button onClick={handleNextStep}>Próximo Passo</button>
         </div>
       ) : (
         <div>
-          <p>Compressão e ventilação.</p>
-          <p>Tempo decorrido: {timeElapsed} segundos</p>
-
+            <p>Lembre-se que você já escolheu seus materiais para realizar o
+atendimento. <strong>Iniciar RCP</strong> </p>
+          <h3>Tempo decorrido: {timeElapsed} segundos</h3>
+          <h2>Compressões: {count}</h2>
+          <h2>Ventilção: {countVentilcao}</h2>
           {showVitoria && <img src={vitoria} className="cena-one" alt="Descrição da Imagem" />}
-          {showHomem && <img src={homem} className="cena-one" alt="Descrição da Imagem" />}
           
           {showCardio && <img src={cardio} className="cena-one-cardio" alt="Descrição da Imagem" />}
           {showCardio && <img src={ventilacao} className="cena-one-cardio" alt="Descrição da Imagem" />}
-          {showCardio && <img src={Dea} className="cena-one-cardio" alt="Descrição da Imagem" />}
           <button onClick={handleButtonClick}>Compressão</button>
           <button onClick={handleVentilacao}>Ventilção</button>
-          <button onClick={handleDea}>Ligar a dea</button>
-          <p>Compressões: {count}</p>
-          <p>Ventilção: {countVentilcao}</p>
+        
           
         </div>
       )}

@@ -48,9 +48,11 @@ width: 250px;
 /*css da orientaçaõ*/
 .button-next{
 border: none;
-float: left;
+
 background: #fff;
 color: #ae332e;
+padding: 20px;
+width: 300px;
 }
 .balao {
   justify-content: end;
@@ -107,9 +109,9 @@ height: 200px;
 }
 .quadrado-constainer{
   background: #354aa7;
-width: 400px;
+width: 300px;
 align-items: center;
-height: 500px; /* Ajuste conforme necessário */
+height: 400px; /* Ajuste conforme necessário */
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centraliza verticalmente */
@@ -127,7 +129,7 @@ height: 500px; /* Ajuste conforme necessário */
  font-size: 30px;
  text-align: center;
 }
-.cena-one{
+.cena-one, .cena-quiz{
   width: 200px;
 }
 
@@ -235,7 +237,7 @@ display: flex;
   
 }
 
-.image-item.incorrect {
+/*.image-item.incorrect {
  border: 10px solid transparent;
   background: #ae332e;
 }
@@ -243,7 +245,7 @@ display: flex;
   border: 10px solid transparent;
   background: #3bae2e;
 }
-
+*/
 
 img .image-item{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave quando a imagem é clicada */
@@ -273,7 +275,10 @@ img .image-item{
   position: relative; /* permite mover a imagem dentro do contêiner */
   animation: caminhada 4s steps(2) infinite; /* animação de caminhada */
 }
-
+.img-jogo-one{
+  width: 100px; /* largura da imagem */
+  height: 150px; /* altura da imagem */
+}
 @keyframes caminhada {
   0% { background-position: 0 0; } /* primeira etapa da caminhada */
   100% { background-position: -600px 0; } /* última etapa da caminhada */
@@ -285,7 +290,13 @@ img .image-item{
   }
 
   /*responsivo do quiz*/
+.img-container{
+  height: 100px;
 
+}
+.cena-quiz{
+  width: 100px;
+}
   .quadrado-constainer{
 width: 200px;
 height: 300px;
@@ -304,5 +315,14 @@ height: 300px;
     margin: 8px;
     position: relative;
   }
-  
+  .footer{
+    display: none;
+  }
+  /*orientações*/
+  .orientacoes-container{
+    display: block;
+  }
+.balao{
+  display: flex;
+}
 }

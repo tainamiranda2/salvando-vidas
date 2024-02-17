@@ -50,7 +50,7 @@ export const Cadastro = () => {
               Salvar
             </button>
           </form>
-          <img src={img3} alt="Descrição da Imagem" />
+          <img src={img3} className='footer' alt="Descrição da Imagem" />
         </div>
       </div>
     </div>

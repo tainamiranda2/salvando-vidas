@@ -2,7 +2,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import homem from '../../img/homem.png';
-import vitoria from '../../img/vitoria.png';
+//import vitoria from '../../img/vitoria.png';
+import curiosos from '../../img/curiosos.png';
+import novaVitoria from '../../img/novaVitoria.png';
 //import './Jogo.css'
 
 export const QuizOne = () => {
@@ -22,8 +24,9 @@ export const QuizOne = () => {
   return (
     <div className='quadrado-quiz'>
     <div className="img-container">
-        <img src={vitoria} className="cena-one" alt="Descrição da Imagem" />
-   <img src={homem} className="cena-one" alt="Descrição da Imagem" />
+        <img src={novaVitoria} className="cena-quiz" alt="Descrição da Imagem" />
+   <img src={homem} className="cena-quiz" alt="Descrição da Imagem" />
+   <img src={curiosos} className="cena-quiz" alt="Descrição da Imagem" />
       </div>
      
       <div className='quadrado-constainer'>

@@ -2,6 +2,7 @@ import  { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import img2 from '../../img/img2.png';
 import img3 from '../../img/img3.png';
+import paramedica from '../../img/paramedica.png';
 
 import bolsa from '../../img/bolsa.png';
 import casaco from '../../img/casaco.png';
@@ -101,7 +102,7 @@ const jogoThree=['/src/img/luva.png', '/src/img/marcara.png', '/src/img/bolsa.pn
       <button className="button-next" onClick={handleNextClick}>
         Next
       </button>
-      <img src={img3} alt="Descrição da Imagem" />
+      <img src={img3} className='footer' alt="Descrição da Imagem" />
     </div>
   );
 };

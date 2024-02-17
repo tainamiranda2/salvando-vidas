@@ -33,6 +33,7 @@ export const Home = () => {
           <button className='home-button' onClick={() => handleButtonClick("idealizadores")}>Idealizadores</button>
           <img
           src={img3}
+          className='footer'
           alt="Descrição da Imagem"
           
         />
