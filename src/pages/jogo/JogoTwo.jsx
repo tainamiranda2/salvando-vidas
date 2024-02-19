@@ -6,6 +6,9 @@ import cardio from '../../img/cardio.webp';
 import ventilacao from '../../img/ventilacao.png';
 //import respiracao from '../../img/respiracao.png';
 
+import joelhos from '../../img/joelhos.png';
+import checar from '../../img/checar.png';
+import novaVitoria from '../../img/novaVitoria.png';
 export const JogoTwo = () => {
   //const navigate = useNavigate();
   const [count, setCount] = useState(0);
@@ -21,7 +24,7 @@ export const JogoTwo = () => {
     "Personagem Vitória ficará de joelhos ao lado da vítima",
     "Personagem Vitória colocará suas duas mãos nos ombros da vítima"
   ];
-  const equipamentos=['/src/img/novaVitoria.png', '/src/img/joelhos.png', '/src/img/checar.png'];
+  const equipamentos=[novaVitoria, joelhos, checar];
 
   useEffect(() => {
     if (timerRunning) {

@@ -3,10 +3,14 @@
 
 import { useState, useEffect } from 'react';
 
-import vitoria from '../../img/vitoria.png';
+//import vitoria from '../../img/vitoria.png';
 import cardio from '../../img/cardio.webp';
 import ventilacao from '../../img/ventilacao.png';
-import Dea from '../../img/DEA.png';
+//import Dea from '../../img/DEA.png';
+
+import joelhos from '../../img/joelhos.png';
+import checar from '../../img/checar.png';
+import novaVitoria from '../../img/novaVitoria.png';
 
 export const JogoThree = () => {
   //const navigate = useNavigate();
@@ -25,7 +29,7 @@ export const JogoThree = () => {
     "Personagem Vitória ficará de joelhos ao lado da vítima",
     "Personagem Vitória colocará suas duas mãos nos ombros da vítima"
   ];
-  const equipamentos=['/src/img/novaVitoria.png', '/src/img/joelhos.png', '/src/img/checar.png'];
+  const equipamentos=[novaVitoria, joelhos, checar];
 
   useEffect(() => {
     if (timerRunning) {
@@ -100,7 +104,7 @@ atendimento. <strong>Iniciar RCP</strong> </p>
           <h3>Tempo decorrido: {timeElapsed} segundos</h3>
           <h2>Compressões: {count}</h2>
           <h2>Ventilção: {countVentilcao}</h2>
-          {showVitoria && <img src={vitoria} className="cena-one" alt="Descrição da Imagem" />}
+          {showVitoria && <img src={novaVitoria} className="cena-one" alt="Descrição da Imagem" />}
           
           {showCardio && <img src={cardio} className="cena-one-cardio" alt="Descrição da Imagem" />}
           {showCardio && <img src={ventilacao} className="cena-one-cardio" alt="Descrição da Imagem" />}

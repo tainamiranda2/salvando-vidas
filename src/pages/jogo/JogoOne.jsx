@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 //import luva from '../../img/luva.png';
 //import marcara from '../../img/marcara.png';
 //import homem from '../../img/homem.png';
-import vitoria from '../../img/vitoria.png';
 import cardio from '../../img/cardio.webp';
 
 import joelhos from '../../img/joelhos.png';
@@ -92,7 +91,7 @@ atendimento. <strong>Iniciar RCP</strong> </p>
           <button className='compressao-botton' onClick={handleButtonClick}>Fazer compressão</button>
           <h3 className='compressao-feitas'>Compressões: {count}</h3>
 
-          {showVitoria && <img src={vitoria} className="cena-one" alt="Descrição da Imagem" />}
+          {showVitoria && <img src={novaVitoria } className="cena-one" alt="Descrição da Imagem" />}
           {showCardio && <img src={cardio} className="cena-one-cardio" alt="Descrição da Imagem" />}
 
           
