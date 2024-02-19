@@ -27,7 +27,7 @@ export const JogoOne = () => {
     "Personagem Vitória ficará de joelhos ao lado da vítima",
     "Personagem Vitória colocará suas duas mãos nos ombros da vítima"
   ];
-  const equipamentos=['/src/img/novaVitoria.png', '/src/img/joelhos.png', '/src/img/checar.png'];
+  const equipamentos=[novaVitoria, joelhos, checar];
   useEffect(() => {
     if (timerRunning) {
       const timer = setInterval(() => {
