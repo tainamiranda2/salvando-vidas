@@ -6,8 +6,10 @@ import { useState, useEffect } from 'react';
 //import homem from '../../img/homem.png';
 import vitoria from '../../img/vitoria.png';
 import cardio from '../../img/cardio.webp';
-//import joelho from '../../img/joelhos.png';
-//import respiracao from '../../img/respiracao.png';
+
+import joelhos from '../../img/joelhos.png';
+import checar from '../../img/checar.png';
+import novaVitoria from '../../img/novaVitoria.png';
 
 export const JogoOne = () => {
   //const navigate = useNavigate();
