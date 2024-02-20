@@ -30,6 +30,10 @@ export const FaseOne = () => {
   const JogoTwo=[luva, marcara, bolsa];
 //jogador ESCOLHEU LUVA, MÁSCARA, BOLSA VALVULA MÁSCARA E DEA
 const JogoThree=[luva, marcara, bolsa, DEA];
+console.log(selectedImages)
+//console.log(images)
+console.log(showResults)
+
 
   useEffect(() => {
     const shuffledImages = shuffleArray([
@@ -71,21 +75,28 @@ const JogoThree=[luva, marcara, bolsa, DEA];
     // Se todos os elementos selecionados são iguais aos elementos de JogoOne e não há nenhum elemento extra
     if (areAllSelectedImagesInJogoOne && areAllJogoOneInSelectedImages) {
       setShowResults(true);
+      alert("Para iniciar atendimento foi selecionado Luva e mascara.")
+
       navigate('/JogoOne');
     }
     // Se todos os elementos selecionados são iguais aos elementos de JogoTwo e não há nenhum elemento extra
     else if (areAllSelectedImagesInJogoTwo && areAllJogoTwoInSelectedImages) {
       setShowResults(true);
+      alert("Para iniciar atendimento foi selecionado um item a mais, Bolsa.")
+
       navigate('/JogoTwo');
     }
     // Se todos os elementos selecionados são iguais aos elementos de JogoThree e não há nenhum elemento extra
     else if (areAllSelectedImagesInJogoThree && areAllJogoThreeInSelectedImages) {
       setShowResults(true);
+      alert("Para iniciar atendimento foi selecionado dois items a mais, Bolsa e DEA.")
+
       navigate('/JogoThree');
+
     }
     // Se os elementos selecionados não correspondem a nenhum dos jogos, limpe a seleção
     else {
-      alert("Elementos selecionados não fazem parte do atendimento")
+      alert("Com os itens selecionados não é possível realizar o atendimento.")
      // setShowResults(true);
       setSelectedImages([]);
     }
@@ -113,14 +124,16 @@ const JogoThree=[luva, marcara, bolsa, DEA];
           <img className='certo-fase' src={certoErrado}/>
           <div className="images-container">
           {images.map((image, index) => (
+ // No retorno do seu componente React
   <img
     key={index}
     src={image}
     alt={`Imagem ${index + 1}`}
-    className={`image-item ${showResults && JogoOne.includes(image) ? 'correct' : ''} ${selectedImages.includes(image) && !JogoOne.includes(image) ? 'incorrect' : ''} ${showResults && selectedImages.includes(image) && JogoOne.includes(image) ? 'selected-correct' : ''}`}
+    className={`image-item ${selectedImages.includes(image) ? 'selected' : ''} ${showResults && JogoOne.includes(image) ? 'correct' : ''} ${selectedImages.includes(image) && !JogoOne.includes(image) ? 'incorrect' : ''} ${showResults && selectedImages.includes(image) && JogoOne.includes(image) ? 'selected-correct' : ''}`}
     onClick={() => handleImageClick(image)}
   />
 ))}
+
 
           </div>
         </div>

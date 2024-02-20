@@ -102,7 +102,7 @@ height: 200px;
 
 /*css do quiz*/
 .quadrado-quiz{
-  display: flex;
+  display: block;
   align-items: center; /* Alinha os itens verticalmente ao centro */
   justify-content: center; 
 
@@ -236,17 +236,21 @@ display: flex;
   position: relative;
   
 }
+.image-item.selected {
+  background: #59ff59; /* Cor de fundo para itens selecionados */
+  border: 10px solid transparent;
 
-/*.image-item.incorrect {
+}
+
+.image-item.incorrect {
  border: 10px solid transparent;
   background: #ae332e;
 }
-.image-item.selected-correct{
-  border: 10px solid transparent;
-  background: #3bae2e;
-}
-*/
 
+
+.image-item.selecione-teste1{
+background: #000;
+}
 img .image-item{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave quando a imagem é clicada */
 }
