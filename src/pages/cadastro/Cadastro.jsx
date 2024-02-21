@@ -1,4 +1,4 @@
-import img1 from '../../img/img1.png';
+//import img1 from '../../img/img1.png';
 import img3 from '../../img/img3.png';
 import rcp from '../../img/rcp.png';
 import perfil from '../../img/perfil.png';
@@ -15,9 +15,9 @@ export const Cadastro = () => {
   return (
     <div className="card-principal">
       <div className="card-container">
-        <img src={img1} alt="Descrição da Imagem" className="card-imagem" />
+    {/**   <img src={img1} alt="Descrição da Imagem" className="card-imagem" />
        
-
+*/}
         <div className='card-segundario'>
         <img src={rcp}/>
           <form>

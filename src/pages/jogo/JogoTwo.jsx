@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 import vitoria from '../../img/vitoria.png';
-import cardio from '../../img/cardio.webp';
+import cardio from '../../img/cardio.png';
 import ventilacao from '../../img/ventilacao.png';
 //import respiracao from '../../img/respiracao.png';
 
@@ -85,8 +85,9 @@ export const JogoTwo = () => {
           <h2>Passo {currentStep + 1}</h2>
           <p>{atendimentos[currentStep]}</p>
 
-          <img className='img-jogo-one' src={ equipamentos[currentStep]} />
           <button onClick={handleNextStep}>Próximo Passo</button>
+          <img className='img-jogo-one' src={ equipamentos[currentStep]} />
+
         </div>
       ) : (
         <div>

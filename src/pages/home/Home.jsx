@@ -1,6 +1,6 @@
 // Importe os módulos necessários
 import { useNavigate } from 'react-router-dom';
-import img1 from '../../img/img1.png';
+//import img1 from '../../img/img1.png';
 import img3 from '../../img/img3.png';
 import rcp from '../../img/rcp.png';
 
@@ -22,9 +22,10 @@ export const Home = () => {
   return (
     <div className="card-principal">
       <div className="card-container">
-        <img
+      {/* <img
           src={img1}    alt="Descrição da Imagem" className="card-imagem"
      />
+     */} 
         <div className='card-segundario'>
           <img src={rcp}/>
           <button className='button-start' onClick={() => handleButtonClick("play")}>Start</button>

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 //import luva from '../../img/luva.png';
 //import marcara from '../../img/marcara.png';
 //import homem from '../../img/homem.png';
-import cardio from '../../img/cardio.webp';
+import cardio from '../../img/cardio.png';
 
 import joelhos from '../../img/joelhos.png';
 import checar from '../../img/checar.png';
@@ -75,13 +75,14 @@ export const JogoOne = () => {
   return (
     <>
       {parada === false ? (
-        <div>
+        <div  className='img-jogo'>
           <h1> O Jogador escolheu luvas e mascara.</h1>
 
           <h2>Passo {currentStep + 1}</h2>
           <p>{atendimentos[currentStep]}</p>
-   <img className='img-jogo-one' src={equipamentos[currentStep]}/>
           <button onClick={handleNextStep}>Próximo Passo</button>
+          <img className='img-jogo-one' src={equipamentos[currentStep]}/>
+
         </div>
       ) : (
         <div className='compressao'>

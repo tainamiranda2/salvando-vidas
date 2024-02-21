@@ -1,7 +1,7 @@
 body{
  color: #fff;
  width: 100%;
- background-image: url('../src/img/escola.jpg');
+ background-image: url('../src/img/fundo.jpg');
  background-size: cover; 
  background-position: center; 
  height: 100vh;
@@ -280,8 +280,11 @@ img .image-item{
   animation: caminhada 4s steps(2) infinite; /* animação de caminhada */
 }
 .img-jogo-one{
-  width: 100px; /* largura da imagem */
-  height: 150px; /* altura da imagem */
+  height: 400px;
+}
+.img-jogo{
+position: absolute; /* Define o posicionamento absoluto */
+
 }
 @keyframes caminhada {
   0% { background-position: 0 0; } /* primeira etapa da caminhada */
@@ -292,7 +295,9 @@ img .image-item{
    .card-imagem {
     display: none;
   }
-
+.img-jogo-one{
+height: 200px;
+}
   /*responsivo do quiz*/
 .img-container{
   height: 100px;
