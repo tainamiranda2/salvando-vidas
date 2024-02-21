@@ -290,6 +290,21 @@ position: absolute; /* Define o posicionamento absoluto */
   0% { background-position: 0 0; } /* primeira etapa da caminhada */
   100% { background-position: -600px 0; } /* última etapa da caminhada */
 }
+/* ideializadores*/
+.idealizadores {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens sejam envolvidos em várias linhas */
+  justify-content: space-between; /* Distribui os itens uniformemente ao longo do eixo principal com espaçamento entre eles */
+}
+
+.idealizadores-curriculo {
+  width: calc(50% - 10px); /* Define a largura de cada item para ocupar metade do contêiner pai com um espaçamento de 10px entre eles */
+  margin-bottom: 20px; /* Adiciona um espaçamento na parte inferior de cada item */
+  background: #354aa7;
+  color: #fff;
+}
+
+
 
 @media screen and (max-width: 600px) {
    .card-imagem {
