@@ -19,7 +19,8 @@ export const Cadastro = () => {
        
 */}
         <div className='card-segundario'>
-        <img src={rcp}/>
+        <p>RCP</p>
+        <span>Salvadno vidas</span>
           <form>
           <img className='perfil' src={perfil}/>
             <div className="input-group">

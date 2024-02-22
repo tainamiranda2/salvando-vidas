@@ -182,6 +182,7 @@ select {
 
 
 /*css da fase*/
+
 .fase-container{
 display: flex;
 }
@@ -260,32 +261,43 @@ img .image-item{
 }
 
 /*css do jogo*/
- img.gif-massagem {
-  animation-play-state: paused !important;
-  padding: 20px;
-  width: 300px;
-  align-items: center;
-}
+
 .cena-one-cardio{
   width: 400px;
   margin: 10x;
 }
 
-.personagem {
-  width: 100px; /* largura da imagem */
-  height: 150px; /* altura da imagem */
-  background-image: url('../src/img/vitoria.png'); /* caminho da sua imagem */
-  background-size: cover; /* redimensiona a imagem para cobrir todo o contêiner */
-  position: relative; /* permite mover a imagem dentro do contêiner */
-  animation: caminhada 4s steps(2) infinite; /* animação de caminhada */
+.jogo-imagem {
+  position: relative; /* Define a posição relativa para os filhos absolutos */
+  display: flex; /* Define o layout como flexível */
+  align-items: flex-end; /* Alinha os itens verticalmente ao rodapé */
+ 
+  height: 100vh; /* Define a altura da div como a altura total da tela */
 }
-.img-jogo-one{
-  height: 400px;
+
+.img-jogo {
+  flex: 1; /* Ocupa todo o espaço disponível */
+  
 }
-.img-jogo{
-position: absolute; /* Define o posicionamento absoluto */
+
+.img-jogo-one {
+  
+  position: absolute; /* Define a posição absoluta para a imagem */
+  bottom: 0; /* Alinha a imagem ao rodapé da div pai */
+  height: 400px; /* Define a altura da imagem */
+}
+
+.texto-botao {
+  flex: 1; /* Ocupa todo o espaço disponível */
+  text-align: center; /* Centraliza o texto */
 
 }
+
+.button-next {
+  margin-top: 10px; /* Adiciona um espaçamento acima do botão */
+}
+
+
 @keyframes caminhada {
   0% { background-position: 0 0; } /* primeira etapa da caminhada */
   100% { background-position: -600px 0; } /* última etapa da caminhada */

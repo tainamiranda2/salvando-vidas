@@ -75,19 +75,22 @@ export const JogoOne = () => {
   return (
     <>
       {parada === false ? (
-        <div  className='img-jogo'>
-          <h1> O Jogador escolheu luvas e mascara.</h1>
-
-          <h2>Passo {currentStep + 1}</h2>
-          <p>{atendimentos[currentStep]}</p>
-          <button onClick={handleNextStep}>Próximo Passo</button>
-          <img className='img-jogo-one' src={equipamentos[currentStep]}/>
-
-        </div>
+       <div className='jogo-imagem'>
+       <div className='img-jogo'>
+         <img className='img-jogo-one' src={equipamentos[currentStep]} alt="Imagem do jogo"/>
+       </div>
+       <div className="balao">
+         <h2>O Jogador escolheu luvas e máscara.</h2>
+         <p>Passo {currentStep + 1}</p>
+         <span>{atendimentos[currentStep]}</span>
+         <button className="button-next-jogo" onClick={handleNextStep}>Próximo Passo</button>
+       </div>
+     </div>
+     
       ) : (
         <div className='compressao'>
-          <p> Lembre-se que você já escolheu seus materiais para realizar o
-atendimento. <strong>Iniciar RCP</strong> </p>
+          <p className='balao'> Lembre-se que você já escolheu seus materiais para realizar o
+atendimento. </p>
           <h2 className='compressao-time'>Tempo decorrido: {timeElapsed} segundos</h2>
           <button className='compressao-botton' onClick={handleButtonClick}>Fazer compressão</button>
           <h3 className='compressao-feitas'>Compressões: {count}</h3>

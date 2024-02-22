@@ -4,12 +4,12 @@ import img2 from '../../img/img2.png';
 import img3 from '../../img/img3.png';
 //import paramedica from '../../img/paramedica.png';
 
-import bolsa from '../../img/bolsa.png';
+//import bolsa from '../../img/bolsa.png';
 import casaco from '../../img/casaco.png';
 import escova from '../../img/escova.png';
 import lapiz from '../../img/lapiz.png';
 import luva from '../../img/luva.png';
-import DEA from '../../img/DEA.png';
+//import DEA from '../../img/DEA.png';
 import maca from '../../img/maca.png';
 import soro from '../../img/soro.png';
 import marcara from '../../img/marcara.png';
@@ -27,17 +27,12 @@ export const FaseOne = () => {
   //jogador escolheu luva e mascara
   const JogoOne = [luva, marcara];
   //jogador escolheu LUVA, MÁSCARA, BOLSA VALVULA MÁSCARA
-  const JogoTwo=[luva, marcara, bolsa];
-//jogador ESCOLHEU LUVA, MÁSCARA, BOLSA VALVULA MÁSCARA E DEA
-const JogoThree=[luva, marcara, bolsa, DEA];
-console.log(selectedImages)
-//console.log(images)
-console.log(showResults)
+
 
 
   useEffect(() => {
     const shuffledImages = shuffleArray([
-      bolsa, casaco, escova, luva, maca, DEA,
+   casaco, escova, luva, maca, 
       marcara, lapiz, carteira, soro, poket, caderno
     ]);
     setImages(shuffledImages);
@@ -60,42 +55,18 @@ console.log(showResults)
   console.log(selectedImagesCopy )
     // Verifica se todos os elementos de JogoOne estão presentes nos elementos selecionados
     const areAllSelectedImagesInJogoOne = JogoOne.every(image => selectedImagesCopy.includes(image));
-    // Verifica se todos os elementos de JogoTwo estão presentes nos elementos selecionados
-    const areAllSelectedImagesInJogoTwo = JogoTwo.every(image => selectedImagesCopy.includes(image));
-    // Verifica se todos os elementos de JogoThree estão presentes nos elementos selecionados
-    const areAllSelectedImagesInJogoThree = JogoThree.every(image => selectedImagesCopy.includes(image));
   
     // Verifica se todos os elementos selecionados estão presentes em JogoOne
     const areAllJogoOneInSelectedImages = selectedImagesCopy.every(image => JogoOne.includes(image));
     // Verifica se todos os elementos selecionados estão presentes em JogoTwo
-    const areAllJogoTwoInSelectedImages = selectedImagesCopy.every(image => JogoTwo.includes(image));
-    // Verifica se todos os elementos selecionados estão presentes em JogoThree
-    const areAllJogoThreeInSelectedImages = selectedImagesCopy.every(image => JogoThree.includes(image));
-  
-    // Se todos os elementos selecionados são iguais aos elementos de JogoOne e não há nenhum elemento extra
+   
     if (areAllSelectedImagesInJogoOne && areAllJogoOneInSelectedImages) {
       setShowResults(true);
       alert("Para iniciar atendimento foi selecionado Luva e mascara.")
 
       navigate('/JogoOne');
-    }
-    // Se todos os elementos selecionados são iguais aos elementos de JogoTwo e não há nenhum elemento extra
-    else if (areAllSelectedImagesInJogoTwo && areAllJogoTwoInSelectedImages) {
-      setShowResults(true);
-      alert("Para iniciar atendimento foi selecionado um item a mais, Bolsa.")
-
-      navigate('/JogoTwo');
-    }
-    // Se todos os elementos selecionados são iguais aos elementos de JogoThree e não há nenhum elemento extra
-    else if (areAllSelectedImagesInJogoThree && areAllJogoThreeInSelectedImages) {
-      setShowResults(true);
-      alert("Para iniciar atendimento foi selecionado dois items a mais, Bolsa e DEA.")
-
-      navigate('/JogoThree');
-
-    }
-    // Se os elementos selecionados não correspondem a nenhum dos jogos, limpe a seleção
-    else {
+    
+    }  else {
       alert("Com os itens selecionados não é possível realizar o atendimento.")
      // setShowResults(true);
       setSelectedImages([]);
