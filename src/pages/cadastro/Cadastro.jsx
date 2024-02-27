@@ -1,15 +1,18 @@
 //import img1 from '../../img/img1.png';
-import img3 from '../../img/img3.png';
-import rcp from '../../img/rcp.png';
+//import img3 from '../../img/img3.png';
+//import rcp from '../../img/rcp.png';
 import perfil from '../../img/perfil.png';
-
+import logo1 from '../../img/logo1.jpg';
+import logo2 from '../../img/logo2.jpg';
+import logo3 from '../../img/logo3.jpg';
+import logo4 from '../../img/logo4.jpg';
 import { useNavigate } from 'react-router-dom';
 
 export const Cadastro = () => {
   const history = useNavigate();
 
   const handleButtonClick = () => {
-    history("QuizOne");
+    history("orientacoes");
   };
 
   return (
@@ -51,7 +54,33 @@ export const Cadastro = () => {
               Salvar
             </button>
           </form>
-          <img src={img3} className='footer' alt="Descrição da Imagem" />
+      
+          <div    className='footer'
+>
+          <img
+          src={logo3}
+      
+          alt="Descrição da Imagem"
+          
+        />
+         <img
+          src={logo4}
+          alt="Descrição da Imagem"
+          
+        />
+         <img
+          src={logo2}
+          
+          alt="Descrição da Imagem"
+          
+        />
+         <img
+          src={logo1}
+          alt="Descrição da Imagem"
+          
+        />
+
+        </div>
         </div>
       </div>
     </div>

@@ -11,6 +11,7 @@ import { Idealizadores } from '../pages/idealizadores/Idealizadores'
 import { Orientacoes } from '../pages/orientacoes/Orientacoes'
 import { JogoThree } from '../pages/jogo/JogoThree'
 import { JogoTwo } from '../pages/jogo/JogoTwo'
+import { Folder } from '../pages/orientacoes/folder'
 
 const Router= () => {
     return (
@@ -19,7 +20,10 @@ const Router= () => {
     <Route path='/' element={<Home/>}/>
     <Route path='/cadastro/QuizOne' element={<QuizOne/>}/>
     <Route path='/cadastro' element={<Cadastro/>}/>
+    <Route path='/cadastro/orientacoes' element={<Orientacoes/>}/>
     <Route path='/orientacoes' element={<Orientacoes/>}/>
+
+    <Route path='/folder' element={<Folder/>}/>
     <Route path='/QuizOne' element={<QuizOne/>}/>
     <Route path='/FaseOne' element={<FaseOne/>}/>
     <Route path='/JogoOne' element={<JogoOne/>}/>
