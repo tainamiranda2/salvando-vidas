@@ -11,7 +11,7 @@ import { Idealizadores } from '../pages/idealizadores/Idealizadores'
 import { Orientacoes } from '../pages/orientacoes/Orientacoes'
 import { JogoThree } from '../pages/jogo/JogoThree'
 import { JogoTwo } from '../pages/jogo/JogoTwo'
-import { Folder } from '../pages/orientacoes/folder'
+import { Folder } from '../pages/orientacoes/Folder'
 
 const Router= () => {
     return (
