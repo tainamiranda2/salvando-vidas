@@ -1,10 +1,12 @@
+import taina from '../../curriculos/fullstack.pdf';
+//import enf from '../../curriculos/enf.docx';
 
 //import {  Link } from 'react-router-dom';
 export const Idealizadores= () => {
     return(
         <>
       
-        <h1>Curriculum - Primeiros Socorros nas Escolas</h1>
+     {/*  <h1>Curriculum - Primeiros Socorros nas Escolas</h1>
         <div className='idealizadores'>
             <div className="Professores">
             <div className='""'>
@@ -96,7 +98,22 @@ export const Idealizadores= () => {
        
 
         </div>
-   
+   */} 
+   <div className='cartilhas'>
+   <a href='' download="enfermagem">
+    <button>Baixar curriculo dos participantes do curso tecnico de enfermagem</button>
+   </a>
+   <a href="" download="Edison">
+    <button>Baixar curriculo:  Prof Dr Edison Camilo</button>
+   </a>
+   <a href={taina} download="Tainá">
+    <button>Baixar curriculo:  Tainá Miranda</button>
+   </a>
+  
+   <a href="" download="Saulo">
+    <button>Baixar curriculo:  Saulo Roberto</button>
+   </a>
+   </div>
         </>
     )
 }

@@ -322,6 +322,26 @@ padding: 10px;
 width: 200px;
 }
 
+/*massagem cardiopulmonar*/
+
+.cartilhas{
+  position: fixed;
+  top: 30%;
+ 
+align-items: center;
+display: flex;
+  flex-direction: column;
+}
+.cartilhas a{
+  text-decoration: none;
+  
+}
+
+.cartilhas button{
+background: #fff;
+color: #ae332e;
+}
+
 @media screen and (max-width: 600px) {
    .card-imagem {
     display: none;
@@ -377,6 +397,8 @@ height: 300px;
   .orientacoes-container{
     display: block;
     width: 200px;
+    position: absolute;
+    bottom: 0px;
   }
 
  .orientacoes-container .vitoria{
