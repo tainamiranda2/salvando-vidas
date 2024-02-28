@@ -21,11 +21,12 @@ export const JogoOne = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [timerRunning, setTimerRunning] = useState(false);
   
-  const atendimentos = [
+  /*const atendimentos = [
     "Vai andando até a vítima, se paramenta com luvas e máscara",
     "Personagem Vitória ficará de joelhos ao lado da vítima",
     "Personagem Vitória colocará suas duas mãos nos ombros da vítima"
-  ];
+  ]~;
+  */
   const equipamentos=[novaVitoria, joelhos, checar];
   useEffect(() => {
     if (timerRunning) {
@@ -77,13 +78,16 @@ export const JogoOne = () => {
       {parada === false ? (
        <div className='jogo-imagem'>
        <div className='img-jogo'>
+       {currentStep === 2 ? (
+        <div className='balao'>
+        <p>SENHOR, SENHOR, VOCÊ ME ESCUTA?</p>
+        </div>
+      ) : null}
+
          <img className='img-jogo-one' src={equipamentos[currentStep]} alt="Imagem do jogo"/>
        </div>
-       <div className="balao">
-         <h2>O Jogador escolheu luvas e máscara.</h2>
-         <p>Passo {currentStep + 1}</p>
-         <span>{atendimentos[currentStep]}</span>
-         <button className="button-next-jogo" onClick={handleNextStep}>Próximo Passo</button>
+       <div >
+         <button className="button-next-jogo" onClick={handleNextStep}>Continuar</button>
        </div>
      </div>
      

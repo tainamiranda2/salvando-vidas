@@ -63,7 +63,7 @@ width: 300px;
   align-items: center;
   position: relative;
   width: 400px;
-  padding: 50px;
+  padding: 30px;
   margin: 10px;
   background-color: #fff;
   color: #000;
@@ -267,31 +267,22 @@ img .image-item{
 }
 
 /*css do jogo*/
-
+.jogo-imagem{
+  display: flex;
+  margin: 5px;
+}
+.button-next-jogo{
+  margin: 50px;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  width: 200px;
+}
 .cena-one-cardio{
   width: 400px;
   margin: 10x;
 }
 
-.jogo-imagem {
-  position: relative; /* Define a posição relativa para os filhos absolutos */
-  display: flex; /* Define o layout como flexível */
-  align-items: flex-end; /* Alinha os itens verticalmente ao rodapé */
- 
-  height: 100vh; /* Define a altura da div como a altura total da tela */
-}
-
-.img-jogo {
-  flex: 1; /* Ocupa todo o espaço disponível */
-  
-}
-
-.img-jogo-one {
-  
-  position: absolute; /* Define a posição absoluta para a imagem */
-  bottom: 0; /* Alinha a imagem ao rodapé da div pai */
-  height: 400px; /* Define a altura da imagem */
-}
 
 .texto-botao {
   flex: 1; /* Ocupa todo o espaço disponível */
@@ -335,12 +326,27 @@ width: 200px;
    .card-imagem {
     display: none;
   }
+   /*responsivo do jogo*/
+  .jogo-image{
+    display: flex;
+  }
 .img-jogo-one{
 height: 200px;
+position: absolute;
+bottom: 0;
+}
+.button-next-jogo{
+  padding: 5px;
+  width:  100px;
+  position: relative;
+}
+.img-jogo .balao{
+  padding: 20px;
+  width: 100px;
 }
   /*responsivo do quiz*/
 .img-container{
-  height: 100px;
+  height: 300px;
 
 }
 .cena-quiz{
@@ -377,7 +383,8 @@ height: 300px;
   width: 200px;
  }
  .orientacoes-container .balao{
-padding: 20px;
+padding: 10px;
+width: 200px;
  }
 
 }

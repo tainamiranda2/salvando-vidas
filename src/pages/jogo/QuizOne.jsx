@@ -17,7 +17,7 @@ export const QuizOne = () => {
       // Leva para a página se o ambiente estiver seguro
       navigate('/FaseOne');
     } else{
-      setAviso("X")
+      setAviso("Avalie novamente a cena.")
     }
   };
 
