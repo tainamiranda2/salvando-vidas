@@ -13,9 +13,8 @@ import novaVitoria from '../../img/novaVitoria.png';
 export const JogoOne = () => {
   //const navigate = useNavigate();
   const [count, setCount] = useState(0);
-  const [showVitoria, setShowVitoria] = useState(true);
  // const [showHomem, setShowHomem] = useState(true);
-  const [showCardio, setShowCardio] = useState(false);
+ // const [showCardio, setShowCardio] = useState(false);
   const [parada, setParada] = useState(false);
   const [timeElapsed, setTimeElapsed] = useState(0);
   const [currentStep, setCurrentStep] = useState(0);
@@ -27,6 +26,7 @@ export const JogoOne = () => {
     "Personagem Vitória colocará suas duas mãos nos ombros da vítima"
   ]~;
   */
+ const textos=["Continuar","Continuar","Ligar para o Samu" ]
   const equipamentos=[novaVitoria, joelhos, checar];
   useEffect(() => {
     if (timerRunning) {
@@ -48,24 +48,24 @@ export const JogoOne = () => {
       setCount(0);
       setTimerRunning(false);
       setParada(false); // Volte para a etapa inicial se necessário
-      setShowVitoria(true);
+      //setShowVitoria(true);
      // setShowHomem(true);
-      setShowCardio(false);
+    //  setShowCardio(false);
       setTimeElapsed(0)
     }
   }, [count, timeElapsed]);
 
   const handleButtonClick = () => {
-    if (!showCardio) {
-      setShowVitoria(false);
+ 
+     // setShowVitoria(false);
     //  setShowHomem(false);
-      setShowCardio(true);
+   //   setShowCardio(true);
       setTimerRunning(true); // Iniciar o temporizador quando as compressões começarem
-    }
+    
     setCount(prevCount => prevCount + 1);
   };
 
-  const handleNextStep = () => {
+  const handlecontinuarStep = () => {
     if (currentStep < 2) {
       setCurrentStep(prevStep => prevStep + 1);
     } else {
@@ -79,15 +79,21 @@ export const JogoOne = () => {
        <div className='jogo-imagem'>
        <div className='img-jogo'>
        {currentStep === 2 ? (
+        <>
         <div className='balao'>
         <p>SENHOR, SENHOR, VOCÊ ME ESCUTA?</p>
+       
         </div>
+
+         </>
       ) : null}
 
          <img className='img-jogo-one' src={equipamentos[currentStep]} alt="Imagem do jogo"/>
        </div>
        <div >
-         <button className="button-next-jogo" onClick={handleNextStep}>Continuar</button>
+
+         <button className="button-continuar-jogo" onClick={handlecontinuarStep}>{textos[currentStep]}</button>
+
        </div>
      </div>
      
@@ -96,11 +102,9 @@ export const JogoOne = () => {
           <p className='balao'> Lembre-se que você já escolheu seus materiais para realizar o
 atendimento. </p>
           <h2 className='compressao-time'>Tempo decorrido: {timeElapsed} segundos</h2>
-          <button className='compressao-botton' onClick={handleButtonClick}>Fazer compressão</button>
           <h3 className='compressao-feitas'>Compressões: {count}</h3>
 
-          {showVitoria && <img src={novaVitoria } className="cena-one" alt="Descrição da Imagem" />}
-          {showCardio && <img src={cardio} className="cena-one-cardio" alt="Descrição da Imagem" />}
+           <img src={cardio} className="cena-one-cardio" onClick={handleButtonClick} alt="Descrição da Imagem" />
 
           
           

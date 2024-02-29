@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate} from 'react-router-dom';
 import novaVitoria from '../../img/novaVitoria.png';
+import { RiArrowGoBackLine } from "react-icons/ri";
 
 //import img3 from '../../img/img3.png';
 import './Orientacoes.css'
@@ -21,7 +22,7 @@ export const Orientacoes = () => {
     "Certo vamos socorrer o professor.",
   ];
 
-  const handleNext = () => {
+  const handlecontinuar = () => {
     if (currentStep < baloes.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
@@ -30,21 +31,21 @@ export const Orientacoes = () => {
     }
   };
 
- /* const handleBack = () => {
-    if (currentStep > 0) {
-      setCurrentStep(currentStep - 1);
-    }
+  const handleGoBack = () => {
+    window.history.back(); // Volta para a página anterior no histórico do navegador
   };
-  */
   return (
+    <>
+             <button onClick={handleGoBack}><RiArrowGoBackLine /></button>
+
     <div className="orientacoes-container">
-     
+
       <img src={novaVitoria} className='vitoria' alt="Descrição da Imagem" />
 
       <div className='orientacoes-home'>
       <div className="balao-container">
         <p className="balao">{baloes[currentStep]}</p>
-        <button className="button-next" onClick={handleNext}>
+        <button className="button-continuar" onClick={handlecontinuar}>
           Continuar
         </button>
        </div>
@@ -77,5 +78,7 @@ export const Orientacoes = () => {
         </div>
   </div>
     </div>
+    </>
+
   );
 };

@@ -15,7 +15,6 @@ import soro from '../../img/soro.png';
 import marcara from '../../img/marcara.png';
 import carteira from '../../img/carteira.png';
 import caderno from '../../img/caderno.png';
-import poket from '../../img/poket.png';
 import rcp from '../../img/rcp.png';
 import certoErrado from '../../img/certo-errado.png';
 
@@ -33,7 +32,7 @@ export const FaseOne = () => {
   useEffect(() => {
     const shuffledImages = shuffleArray([
    casaco, escova, luva, maca, 
-      marcara, lapiz, carteira, soro, poket, caderno
+      marcara, lapiz, carteira, soro,  caderno
     ]);
     setImages(shuffledImages);
   }, []);
@@ -50,7 +49,7 @@ export const FaseOne = () => {
     }
   };
 
-  const handleNextClick = () => {
+  const handlecontinuarClick = () => {
     const selectedImagesCopy = [...selectedImages]; // Copia os elementos selecionados para não modificar o estado original
   console.log(selectedImagesCopy )
     // Verifica se todos os elementos de JogoOne estão presentes nos elementos selecionados
@@ -109,8 +108,8 @@ export const FaseOne = () => {
           </div>
         </div>
       </div>
-      <button className="button-next" onClick={handleNextClick}>
-        Next
+      <button className="button-continuar" onClick={handlecontinuarClick}>
+        continuar
       </button>
       <img src={img3} className='footer' alt="Descrição da Imagem" />
     </div>

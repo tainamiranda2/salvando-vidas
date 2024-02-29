@@ -7,6 +7,7 @@ import logo2 from '../../img/logo2.jpg';
 import logo3 from '../../img/logo3.jpg';
 import logo4 from '../../img/logo4.jpg';
 import { useNavigate } from 'react-router-dom';
+import { RiArrowGoBackLine } from "react-icons/ri";
 
 export const Cadastro = () => {
   const history = useNavigate();
@@ -14,9 +15,17 @@ export const Cadastro = () => {
   const handleButtonClick = () => {
     history("orientacoes");
   };
+  const handleGoBack = () => {
+    window.history.back(); // Volta para a página anterior no histórico do navegador
+  };
+
 
   return (
+    <>
+    
     <div className="card-principal">
+    <button onClick={handleGoBack}><RiArrowGoBackLine /></button>
+
       <div className="card-container">
     {/**   <img src={img1} alt="Descrição da Imagem" className="card-imagem" />
        
@@ -84,5 +93,6 @@ export const Cadastro = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };

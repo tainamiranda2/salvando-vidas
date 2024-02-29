@@ -50,7 +50,7 @@ width: 250px;
 
 }
 /*css da orientaçaõ*/
-.button-next{
+.button-continuar{
 border: none;
 
 background: #fff;
@@ -271,16 +271,18 @@ img .image-item{
   display: flex;
   margin: 5px;
 }
-.button-next-jogo{
+.button-continuar-jogo{
   margin: 50px;
   position: absolute;
   bottom: 0;
   padding: 20px;
   width: 200px;
 }
-.cena-one-cardio{
+.compressao .cena-one-cardio{
   width: 400px;
-  margin: 10x;
+cursor: pointer;
+  left: 40%;
+  position: absolute;
 }
 
 
@@ -290,11 +292,28 @@ img .image-item{
 
 }
 
-.button-next {
+.button-continuar {
   margin-top: 10px; /* Adiciona um espaçamento acima do botão */
 }
 
+/*idealizadores*/
+.idealizadores{
+max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
 
+.curriculo {
+  background: #f9f9f9;
+  color: #ae332e;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#backToTopBtn{
+  background: #f9f9f9;
+  transform: rotate(90deg);
+border: none;
+}
 @keyframes caminhada {
   0% { background-position: 0 0; } /* primeira etapa da caminhada */
   100% { background-position: -600px 0; } /* última etapa da caminhada */
@@ -314,38 +333,49 @@ margin: 5px;
 border-radius: 30px;
 }
 
-*/
 
-.idealizadores .Professores,.voluntarios , .alunos-ifal, .bolsistas{
+
+.idealizadores{
 background: #000;
 padding: 10px;
 width: 200px;
 }
-
+*/
 /*massagem cardiopulmonar*/
 
 .cartilhas{
-  position: fixed;
-  top: 30%;
- 
+  background: #f9f9f9;
+color: #ae332e;
+ padding: 30px;
+ display: flex;
 align-items: center;
-display: flex;
   flex-direction: column;
+  width: 200px;
+  position: absolute;
+  
+  left: 40%;
 }
 .cartilhas a{
   text-decoration: none;
   
 }
 
-.cartilhas button{
-background: #fff;
-color: #ae332e;
-}
+
 
 @media screen and (max-width: 600px) {
    .card-imagem {
     display: none;
   }
+  .card-principal{
+    position: absolute;
+bottom: 0;
+  }
+  .card-principal h3,h2{
+    
+    color: #fff;
+  }
+
+
    /*responsivo do jogo*/
   .jogo-image{
     display: flex;
@@ -355,7 +385,7 @@ height: 200px;
 position: absolute;
 bottom: 0;
 }
-.button-next-jogo{
+.button-continuar-jogo{
   padding: 5px;
   width:  100px;
   position: relative;
@@ -408,5 +438,17 @@ height: 300px;
 padding: 10px;
 width: 200px;
  }
-
+.cartilhas{
+  top: 30%;
+  left: 15%;
+}
+.compressao .cena-one-cardio{
+  left: 15%;
+  bottom: 30px;
+  width: 200px;
+}
+.compressao .balao{
+padding: 20px;
+width: 200px;
+}
 }

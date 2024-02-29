@@ -64,7 +64,7 @@ export const JogoTwo = () => {
     
   };
 
-  const handleNextStep = () => {
+  const handlecontinuarStep = () => {
     if (currentStep < 2) {
       setCurrentStep(prevStep => prevStep + 1);
     } else {
@@ -85,7 +85,7 @@ export const JogoTwo = () => {
           <h2>Passo {currentStep + 1}</h2>
           <p>{atendimentos[currentStep]}</p>
 
-          <button onClick={handleNextStep}>Próximo Passo</button>
+          <button onClick={handlecontinuarStep}>Próximo Passo</button>
           <img className='img-jogo-one' src={ equipamentos[currentStep]} />
 
         </div>
