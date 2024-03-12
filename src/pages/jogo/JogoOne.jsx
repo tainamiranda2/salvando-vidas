@@ -4,11 +4,15 @@ import { useState, useEffect } from 'react';
 //import luva from '../../img/luva.png';
 //import marcara from '../../img/marcara.png';
 //import homem from '../../img/homem.png';
-import cardio from '../../img/cardio.png';
+//import cardio from '../../img/cardio.png';
 
-import joelhos from '../../img/joelhos.png';
-import checar from '../../img/checar.png';
+//import joelhos from '../../img/joelhos.png';
+//import checar from '../../img/checar.png';
 import novaVitoria from '../../img/novaVitoria.png';
+
+import checar from '../../img/checarC.png';
+import senhor from '../../img/senhor.png';
+import massagem from '../../img/massagem.png';
 
 export const JogoOne = () => {
   //const navigate = useNavigate();
@@ -27,7 +31,7 @@ export const JogoOne = () => {
   ]~;
   */
  const textos=["Continuar","Continuar","Ligar para o Samu" ]
-  const equipamentos=[novaVitoria, joelhos, checar];
+  const equipamentos=[novaVitoria, senhor, checar];
   useEffect(() => {
     if (timerRunning) {
       const timer = setInterval(() => {
@@ -39,18 +43,16 @@ export const JogoOne = () => {
   }, [timerRunning]);
 
   useEffect(() => {
-    if (count >= 100 && count <= 200) {
+    if (count === 100 && timeElapsed>=60) {
       setTimerRunning(false);
+
       alert('PARABÉNS! VOCÊ SALVOU UMA PESSOA!')
-    } else if (timeElapsed > 60) {
-      alert('Deve iniciar novamente RCP, pois o jogador não consiguiu salvar a vítima.')
-      // Reiniciar as compressões se o tempo decorrido for superior a 1 minuto
+    } else if (timeElapsed <= 60 && count >= 100 || count >= 200 ) {
+      alert('QUE PENA VOCÊ NÃO FEZ NO TEMPO CERTO.')
       setCount(0);
       setTimerRunning(false);
       setParada(false); // Volte para a etapa inicial se necessário
-      //setShowVitoria(true);
-     // setShowHomem(true);
-    //  setShowCardio(false);
+   
       setTimeElapsed(0)
     }
   }, [count, timeElapsed]);
@@ -104,7 +106,7 @@ atendimento. </p>
           <h2 className='compressao-time'>Tempo decorrido: {timeElapsed} segundos</h2>
           <h3 className='compressao-feitas'>Compressões: {count}</h3>
 
-           <img src={cardio} className="cena-one-cardio" onClick={handleButtonClick} alt="Descrição da Imagem" />
+           <img src={massagem} className="cena-one-cardio" onClick={handleButtonClick} alt="Descrição da Imagem" />
 
           
           

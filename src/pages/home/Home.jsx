@@ -18,7 +18,9 @@ export const Home = () => {
       history("idealizadores");
     } else if (rota === "play") {
       history("cadastro");
-    } else {
+    } else if(rota==="graficos"){
+      history("graficos");
+    }else{
       history("folder");
     }
   }
@@ -31,6 +33,7 @@ export const Home = () => {
      />
      */} 
         <div className='card-segundario'>
+       {/*<button onClick={() => handleButtonClick("graficos")}>Estatisticas</button>*/} 
           <h3>RCP</h3>
   <h2>Salvando vidas</h2>
           <button className='button-start' onClick={() => handleButtonClick("play")}>Start</button>
