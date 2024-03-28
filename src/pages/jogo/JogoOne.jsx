@@ -45,7 +45,11 @@ export const JogoOne = () => {
   useEffect(() => {
     if (count >= 100 && count <= 120 && timeElapsed >= 60) {
       setTimerRunning(false);
-      alert('Você Fez 100 a 120 compressões um minuto, PARABÉNS! VOCÊ SALVOU UMA PESSOA!');
+      alert('Você fez 100 a 120 compressões em um minuto, PARABÉNS! VOCÊ SALVOU UMA PESSOA!');
+      setCount(0);
+      setTimerRunning(false);
+      setParada(false); // Volte para a etapa inicial se necessário
+      setTimeElapsed(0);
     } else if (timeElapsed >= 60 && (count < 100 || count > 120)) {
       alert('Você não fez 100 a 120 compressões em menos de um minuto, QUE PENA VOCÊ NÃO FEZ NO TEMPO CERTO.');
       setCount(0);
