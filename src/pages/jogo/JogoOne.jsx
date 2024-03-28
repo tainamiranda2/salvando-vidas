@@ -43,19 +43,17 @@ export const JogoOne = () => {
   }, [timerRunning]);
 
   useEffect(() => {
-    if (count === 100 && timeElapsed>=60) {
+    if (count >= 100 && count <= 120 && timeElapsed >= 60) {
       setTimerRunning(false);
-
-      alert('PARABÉNS! VOCÊ SALVOU UMA PESSOA!')
-    } else if (timeElapsed <= 60 && count >= 100 || count >= 200 ) {
-      alert('QUE PENA VOCÊ NÃO FEZ NO TEMPO CERTO.')
+      alert('Você Fez 100 a 120 compressões um minuto, PARABÉNS! VOCÊ SALVOU UMA PESSOA!');
+    } else if (timeElapsed >= 60 && (count < 100 || count > 120)) {
+      alert('Você não fez 100 a 120 compressões em menos de um minuto, QUE PENA VOCÊ NÃO FEZ NO TEMPO CERTO.');
       setCount(0);
       setTimerRunning(false);
       setParada(false); // Volte para a etapa inicial se necessário
-   
-      setTimeElapsed(0)
+      setTimeElapsed(0);
     }
-  }, [count, timeElapsed]);
+}, [count, timeElapsed]);
 
   const handleButtonClick = () => {
  
@@ -103,8 +101,8 @@ export const JogoOne = () => {
         <div className='compressao'>
           <p className='balao'> Lembre-se que você já escolheu seus materiais para realizar o
 atendimento. </p>
-          <h2 className='compressao-time'>Tempo decorrido: {timeElapsed} segundos</h2>
-          <h3 className='compressao-feitas'>Compressões: {count}</h3>
+          <p className='compressao-time'>Tempo decorrido: {timeElapsed} segundos</p>
+          <p className='compressao-feitas'>Compressões: {count}</p>
 
            <img src={massagem} className="cena-one-cardio" onClick={handleButtonClick} alt="Descrição da Imagem" />
 

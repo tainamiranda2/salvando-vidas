@@ -17,7 +17,7 @@ export const Home = () => {
     if (rota === "idealizadores") {
       history("idealizadores");
     } else if (rota === "play") {
-      history("cadastro");
+      history("orientacoes");
     } else if(rota==="graficos"){
       history("graficos");
     }else{

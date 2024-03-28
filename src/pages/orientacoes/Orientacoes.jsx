@@ -16,10 +16,10 @@ export const Orientacoes = () => {
   const baloes = [
     "Olá, meu nome é VITÓRIA",
     "Estou muito feliz, iniciei as minhas aulas de primeiros socorros! Você sabe o que são primeiros socorros?",
-    "Primeiros Socorros são os cuidados iniciais que devem ser prestados rapidamente a uma pessoa, vítima de acidentes ou de mal súbito, cujo estado físico põe em perigo a sua vida, com o fim de manter as funções vitais e evitar o agravamento de suas condições, aplicando medidas e procedimentos até a chegada do socorro médico",
+    "Primeiros Socorros são os cuidados iniciais que devem ser prestados rapidamente a uma pessoa, vítima de acidentes ou de mal súbito, cujo estado físico põe em perigo a sua vida, com o fim de manter as funções vitais e evitar o agravamento de suas condições, aplicando medidas e procedimentos até a chegada do socorro médico.",
     "SOCORRO !!! Tem alguém caído, vamos ver o que está acontecendo !!!",
     "Vitóriaaa, o professor José acabou de cair no chão, por favor, ajude!",
-    "Certo vamos socorrer o professor.",
+    "Certo. Vamos socorrer o professor.",
   ];
 
   const handlecontinuar = () => {

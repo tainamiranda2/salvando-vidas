@@ -14,12 +14,12 @@ export const Folder = () => {
       <div className='cartilhas'>
        
         <h3>Baixar folder com orientações.</h3>
-        <p>Baixar cartilha para massagem cardiopulmonar no bebê</p>
+        <p>Baixar cartilha para reanimação cardiopulmonar no bebê</p>
 
         <a href={bebe} download="bebe">
           <button><CiSaveDown2 /></button>
         </a>
-        <p>Baixar cartilha para massagem cardiopulmonar no adulto</p>
+        <p>Baixar cartilha para reanimação cardiopulmonar no adulto</p>
         <a href={adulto} download="adulto">
           <button><CiSaveDown2 /></button>
         </a>

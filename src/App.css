@@ -1,5 +1,4 @@
 body{
- color: #fff;
  width: 100%;
  background-image: url('../src/img/fundo.jpg');
  background-size: cover; 
@@ -51,6 +50,10 @@ width: 250px;
 
 }
 /*css da orientaçaõ*/
+.orientacoes-container{
+  position: absolute;
+  bottom: 0;
+}
 .button-continuar{
 border: none;
 
@@ -60,7 +63,6 @@ padding: 20px;
 width: 300px;
 }
 .balao {
-  justify-content: end;
   align-items: center;
   position: relative;
   width: 400px;
@@ -84,13 +86,19 @@ width: 300px;
 */
 .orientacoes-container {
   display: flex;
+ 
 }
-
+.orientacoes-home{
+ bottom: 2px;
+  position: absolute;
+  margin-left: 70%;
+  
+}
 .balao-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Alinhar o balão à esquerda */
-  flex: 1; /* Ocupar o espaço disponível */
+ /* Ocupar o espaço disponível */
 }
 
 
@@ -112,7 +120,8 @@ width: 300px;
   display: block;
   align-items: center; /* Alinha os itens verticalmente ao centro */
   justify-content: center; 
-
+position: absolute;
+bottom: 2;
 }
 .quadrado-constainer{
   background: #354aa7;
@@ -269,25 +278,46 @@ img .image-item{
 
 /*css do jogo*/
 .jogo-imagem{
-  display: flex;
-  margin: 5px;
-}
-.button-continuar-jogo{
-  margin: 50px;
+  /*display: flex;
+  margin: 5px;*/
   position: absolute;
   bottom: 0;
+  left: 50%;
+  right: 50%;
+}
+img.img-jogo-one {
+  width: 200px;
+ height: 200px;
+}
+
+.button-continuar-jogo{
+ /* margin: 50px;
+  /position: absolute;
+  bottom: 0;
+  
   padding: 20px;
+  */
   width: 200px;
 }
-.compressao .cena-one-cardio{
+
+ .cena-one-cardio{
   width: 200px;
+  bottom: 0;
+  position: absolute;
 cursor: pointer;
 color: #ae332e;
   left: 40%;
   position: absolute;
 }
 
-
+.compressao-time, .compressao-feitas{
+  background: #f9f9f9;
+  color: #ae332e;
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
+  margin: 5px;
+}
 .texto-botao {
   flex: 1; /* Ocupa todo o espaço disponível */
   text-align: center; /* Centraliza o texto */
@@ -295,7 +325,8 @@ color: #ae332e;
 }
 
 .button-continuar {
-  margin-top: 10px; /* Adiciona um espaçamento acima do botão */
+  margin-top: 10px; 
+  /* Adiciona um espaçamento acima do botão */
 }
 
 /*idealizadores*/
@@ -383,24 +414,60 @@ align-items: center;
   color: #ae332e;
   width: 300px;
 }
+@media screen and (min-width: 900px) {
+  /* Coloque aqui as regras CSS específicas para telas de computador */
+  .card-principal .card-segundario h2, h3{
+  font-size: 40px;
+margin: 4px;
+  font-weight: bold;
+  }
+  .card-principal{
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    bottom: 30px;
 
+  }
+  .orientacoes-container{
+    /* display: inline;
+    
+    */
+      position: absolute;
+      bottom: 0px;
+      margin: 0px;
+    }
+    
+    .quadrado-quiz{
+      position: absolute;
+      display: inline;
+      }
+     
+ /* .card-principal h3, h2{
+  color: #fff;
+
+}*/
+
+}
 @media screen and (max-width: 600px) {
    .card-imagem {
     display: none;
   }
   .card-principal{
     position: absolute;
-bottom: 0;
+    bottom: 0;
   }
   .card-principal h3,h2{
-    
+    font-size: 30px;
     color: #fff;
   }
 
 
    /*responsivo do jogo*/
-  .jogo-image{
-    display: flex;
+
+
+  .jogo-imagem .button-continuar-jogo{
+float: right;
+margin: 16px;
   }
 .img-jogo-one{
 height: 200px;
@@ -408,12 +475,9 @@ position: absolute;
 bottom: 0;
 
 }
-.button-continuar-jogo{
-  padding: 5px;
-  width:  100px;
-  position: relative;
-}
+
 .img-jogo .balao{
+  margin-bottom: 150px;
   padding: 20px;
   width: 100px;
 }
@@ -448,18 +512,28 @@ height: 300px;
   }
   /*orientações*/
   .orientacoes-container{
-    display: block;
-    width: 200px;
+  /* display: inline;
+  
+  */
     position: absolute;
     bottom: 0px;
+    margin: 0px;
   }
 
  .orientacoes-container .vitoria{
-  width: 200px;
+  width: 150px;
+  margin: 0px;
+  height: 200px;
  }
  .orientacoes-container .balao{
-padding: 10px;
+padding: 25px;
+margin: 0px;
+
 width: 200px;
+ }
+ .orientacoes-container .button-continuar{
+  padding: 15px;
+  width: 200px;
  }
 .cartilhas{
   top: 30%;
