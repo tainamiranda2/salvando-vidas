@@ -147,8 +147,15 @@ height: 400px; /* Ajuste conforme necessário */
 }
 .cena-one, .cena-quiz{
   width: 200px;
+ /* margin: 10px;
+  position: fixed;
+  bottom: 0;
+  */
 }
-
+.cena-quiz{
+  /*position: fixed;
+  bottom: 0;*/
+}
 .button-quiz-one{
  display: flex
 }
@@ -190,9 +197,12 @@ select {
 }
 /*css do quiz*/
 .img-container {
-  justify-content: space-around; /* Ajuste conforme necessário */
-  align-items: center; /* Ajuste conforme necessário */
-  display: flex;
+ /* justify-content: space-around;
+  align-items: center;
+
+  display: flex;*/
+  position: fixed;
+  bottom: 0;
 }
 
 
@@ -303,7 +313,6 @@ img.img-jogo-one {
  .cena-one-cardio{
   width: 200px;
   bottom: 0;
-  position: absolute;
 cursor: pointer;
 color: #ae332e;
   left: 40%;
@@ -487,6 +496,7 @@ bottom: 0;
 
 }
 .cena-quiz{
+
   width: 100px;
 }
   .quadrado-constainer{
